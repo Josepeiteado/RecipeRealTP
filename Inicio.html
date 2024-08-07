@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Recipe Realm es una pagina web para ayudarte a encontrar lo que quieras para cocinar, te brinda los ingredientes y te da toda la información necesaria para que puedas hacerlo">
+    <meta name="keywords" content="Ingredientes, cocinar, preparación, Recetas,seguir, información">
+    <link rel="canonical" href="www.reciperealm.com">
+    <meta name="robots" content="www.reciperealm.com">
+    <meta name="author" content="Alvarez, Palacios, Peiteado y Rocco">
+    <meta name="publisher" content="Alvarez, Palacios, Peiteado y Rocco">
+    <title>Página principal de Recipe Realm</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="menu">
+                <li class="menu-item left"><a href="Perfil.html" title="perfil ana"><img class="perfil" src="IMAGENES/Perfil.png" alt="Icono Izquierdo" title="icono perfil"></a></li>
+                <li class="menu-item center"><a href="#" title="logo"><img class="logo2" src="IMAGENES/recipe realm.png" alt="Logo1" title="icono logo"></a></li>
+                <li class="menu-item right"><a href="#" title="menu"><img class="imagenes1" src="IMAGENES/casa.png" alt="Icono Derecho 1" title="icono casa"></a></li>
+                <li class="menu-item right"><a href="index.html" title="regresar"><img class="imagenes" src="IMAGENES/salida.png" alt="Icono Derecho 2" title="icono salida"></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="banner">
+        <div class="search-container">
+            <input type="text" id="search" placeholder="Buscar...">
+            <button type="button" onclick="buscar()"><a href="Mi restaurante.html" title="restaurant"><img class="lupa" src="IMAGENES/Lupa.png" alt="Lupa" title="lupa"></a></button>
+        </div>
+        </div>
+    </div>
+
+    <div class="comidas">
+        <img class="pizza"src="IMAGENES/Group 4.png" alt="comida1" title="pizza">
+        <img class="ensalada"src="IMAGENES/Group 26.png" alt="comida2" title="ensalada">
+        <img class="postres"src="IMAGENES/Group 6.png" alt="comida3" title="postres">
+        <img class="pastas"src="IMAGENES/Group 7.png" alt="comida4" title="pastas">
+        <img class="platos"src="IMAGENES/Group 25.png" alt="comida5" title="platos">
+        <img class="aperitivos"src="IMAGENES/Group 9.png" alt="comida6" title="aperitivos">
+    </div>
+
+    <div class="grid-container">
+        <div class="card">
+            <img src="IMAGENES/composicion-deliciosa-sopa-otono_23-2148634466 1.png" alt="Imagen de Receta 1" title="receta1" class="card-image">
+            <div class="card-content">
+                <h2 class="card-title">SOPA DE CALABAZA</h2>
+                <h3 class="card-subtitle">Cucina D'Onore</h3>
+                <h4>NIVEL FACIL  / DURACIÓN 30’</h4>
+                <button class="card-button"><a class="link2" href="Receta.html" title="recetaas4">VER RECETAS</a></button>
+            </div>
+        </div>
+        <div class="card">
+            <img src="IMAGENES/lasagna-tradicional-rica-salsa-bolonesa_60438-3536 1.png" alt="Imagen de Receta 2" title="receta2" class="card-image">
+            <div class="card-content">
+                <h2 class="card-title">LASAÑA DE BOLOGNESA</h2>
+                <h3 class="card-subtitle">Italpast</h3>
+                <h4>NIVEL FACIL  / DURACIÓN 45’</h4>
+                <button class="card-button">VER RECETAS</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="grid-container">
+        <div class="card">
+            <img src="IMAGENES/Pato a la naranja.png" alt="Imagen de Receta 1" title="Pato a la narajna" class="card-image">
+            <div class="card-content">
+                <h2 class="card-title">PATO A LA NARANJA</h2>
+                <h3 class="card-subtitle">Bis Bistro</h3>
+                <4>NIVEL FACIL  / DURACIÓN 30’</4>
+                <br>
+                <br>
+                <button class="card-button">VER RECETAS</button>
+            </div>
+        </div>
+        <div class="card">
+            <img src="IMAGENES/ensalada-salad-m 1.png" alt="Imagen de Receta 2" title="ensalada con aiceitunas" class="card-image">
+            <div class="card-content">
+                <h2 class="card-title">  ENSALADA CON ACEITUNAS GORDAL</h2>
+                <h3 class="card-subtitle">Mengano</h3>
+                <4>NIVEL FACIL  / DURACIÓN 30’</4>
+                <br>
+                <br>
+                <button class="card-button">VER RECETAS</button>
+            </div>
+        </div>
+        
+    </div>
+    
+    <div class="grid-container">
+        <div class="card">
+            <img src="IMAGENES/hamburguesa-gambas 1.png" alt="Imagen de Receta 1" title="hamburguesa" class="card-image">
+            <div class="card-content">
+                <h2 class="card-title">HAMBURGUESA GAMBAS Y GULAS </h2>
+                <h3 class="card-subtitle">The Burger Company</h3>
+                <4>NIVEL FACIL  / DURACIÓN 30’</4>
+                <br>
+                <br>
+                <button class="card-button">VER RECETAS</button>
+            </div>
+        </div>
+        <div class="card">
+            <img src="IMAGENES/RJ_EPISODICAS_URAMAKI_PHILADELPHIA_ROLL_NEW_YORK_ROLL-8-1024x683 1.png" alt="Imagen de Receta 2"  title="uramaki" class="card-image">
+            <div class="card-content">
+                <h2 class="card-title">URAMAKI</h2>
+                <h3 class="card-subtitle">Fabric</h3>
+                <4>NIVEL FACIL  / DURACIÓN 30’</4>
+                <br>
+                <br>
+                <button class="card-button">VER RECETAS</button>
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="grid-container">
+        <div class="card">
+            <img src="IMAGENES/pasta_fBaW4Xh0vdNORixwSAJ9MsK7k6HFQo-1024x683 1.png" alt="Imagen de Receta 1" title="pastas de langostinos" class="card-image">
+            <div class="card-content">
+                <h2 class="card-title">PASTAS DE LANGOSTINOS</h2>
+                <h3 class="card-subtitle">Sucre</h3>
+                <4>NIVEL FACIL  / DURACIÓN 30’</4>
+                <br>
+                <br>
+                <button class="card-button">VER RECETAS</button>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="IMAGENES/79fca6169d91-wrap-de-sensational-pieces 1.png" alt="Imagen de Receta 2"  title="wrap" class="card-image">
+            <div class="card-content">
+                <h2 class="card-title">WRAP MEDITERRANEO</h2>
+                <h3 class="card-subtitle">El galpon de tacuara</h3>
+                <4>NIVEL FACIL  / DURACIÓN 30’</4>
+                <br>
+                <br>
+                <button class="card-button">VER RECETAS</button>
+                
+            </div>
+        </div>
+        
+    </div>
+    <br>
+    <br>
+    <footer class="footer">
+        <div class="footer-content">
+            <img src="IMAGENES/recipe realm2.png" alt="Logo de la Empresa" title="logo de la empresa" class="footer-logo">
+            <div class="social-icons">
+                <a href="https://www.facebook.com" target="_blank" class="social-icon" title="red facebook">
+                    <img src="IMAGENES/facebook.png" alt="Facebook" title="facebook">
+                </a>
+                <a href="https://www.instagram.com" target="_blank" class="social-icon" title="red instagram">
+                    <img src="IMAGENES/Insta.png" alt="Instragram" title="instagram">
+                </a>
+                <a href="https://www.tiktok.com" target="_blank" class="social-icon" title="red tiktok">
+                    <img src="IMAGENES/Tiktok.png" alt="TikTok" title="tiktok">
+                </a>
+                <a href="https://www.youtube.com" target="_blank" class="social-icon" title="red youtube">
+                    <img src="IMAGENES/Youtube.png" alt="Youtube" title="youtube">
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
