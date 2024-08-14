@@ -117,6 +117,23 @@
             </div>
         </div>
         </section>
+
+        <button class="floating-button" onclick="openModal()">+</button>
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeModal()">&times;</span>
+            <h2>Sube tu Receta</h2>
+            <form onsubmit="return submitRecipe()">
+                <label for="recipeName">Nombre de la Receta:</label>
+                <input type="text" id="recipeName" name="recipeName" required><br><br>
+                <label for="ingredients">Ingredientes:</label><br>
+                <textarea id="ingredients" name="ingredients" rows="4" cols="50" required></textarea><br><br>
+                <label for="instructions">Instrucciones:</label><br>
+                <textarea id="instructions" name="instructions" rows="4" cols="50" required></textarea><br><br>
+                <input class="subir" type="submit" value="Subir Receta">
+            </form>
+        </div>
+    </div>
         <br>
         <br>
         <footer class="footer">

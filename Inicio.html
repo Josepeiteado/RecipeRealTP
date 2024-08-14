@@ -13,6 +13,10 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div id="loaderContainer"> 
+        <div id="loader"></div>
+    </div>
+    <div id="cargador">
     <header>
         <nav>
             <ul class="menu">
@@ -26,19 +30,22 @@
 
     <div class="banner">
         <div class="search-container">
-            <input type="text" id="search" placeholder="Buscar...">
-            <button type="button" onclick="buscar()"><a href="Mi restaurante.html" title="restaurant"><img class="lupa" src="IMAGENES/Lupa.png" alt="Lupa" title="lupa"></a></button>
+            <div class="search-bar">
+                <form onsubmit="return searchRecipe()">
+                    <input type="text" id="search" placeholder="Busca tu receta...">
+                    <input class="buscador" type="submit" value="Buscar">
+                </form>
+            </div>
         </div>
         </div>
-    </div>
 
     <div class="comidas">
-        <img class="pizza"src="IMAGENES/Group 4.png" alt="comida1" title="pizza">
-        <img class="ensalada"src="IMAGENES/Group 26.png" alt="comida2" title="ensalada">
-        <img class="postres"src="IMAGENES/Group 6.png" alt="comida3" title="postres">
-        <img class="pastas"src="IMAGENES/Group 7.png" alt="comida4" title="pastas">
-        <img class="platos"src="IMAGENES/Group 25.png" alt="comida5" title="platos">
-        <img class="aperitivos"src="IMAGENES/Group 9.png" alt="comida6" title="aperitivos">
+        <a href="#pizza"><img class="pizza"src="IMAGENES/Group 4.png" alt="comida1" title="pizza"></a>
+        <a href="#ensalada"><img class="ensalada"src="IMAGENES/Group 26.png" alt="comida2" title="ensalada"></a>
+        <a href="#tarta"><img class="postres"src="IMAGENES/Group 6.png" alt="comida3" title="postres"></a>
+        <a href="#pastas"><img class="pastas"src="IMAGENES/Group 7.png" alt="comida4" title="pastas"></a>
+        <a href="#platos"><img class="platos"src="IMAGENES/Group 25.png" alt="comida5" title="platos"></a>
+        <a href="#aperitivos"><img class="aperitivos"src="IMAGENES/Group 9.png" alt="comida6" title="aperitivos"></a>
     </div>
 
     <div class="grid-container">
@@ -51,53 +58,53 @@
                 <button class="card-button"><a class="link2" href="Receta.html" title="recetaas4">VER RECETAS</a></button>
             </div>
         </div>
-        <div class="card">
-            <img src="IMAGENES/lasagna-tradicional-rica-salsa-bolonesa_60438-3536 1.png" alt="Imagen de Receta 2" title="receta2" class="card-image">
+        <div class="card" id="pizza">
+            <img src="IMAGENES/pizza.png" alt="Imagen de Receta 2" title="receta2" class="card-image">
             <div class="card-content">
-                <h2 class="card-title">LASAÑA DE BOLOGNESA</h2>
-                <h3 class="card-subtitle">Italpast</h3>
+                <h2 class="card-title">PIZZA ITALIANA CON MIEL</h2>
+                <h3 class="card-subtitle">Italpizza</h3>
                 <h4>NIVEL FACIL  / DURACIÓN 45’</h4>
-                <button class="card-button">VER RECETAS</button>
+                <button class="card-button"><a class="link2" href="Receta pizza.html" title="receta5">VER RECETAS</a></button>
             </div>
         </div>
     </div>
 
     <div class="grid-container">
-        <div class="card">
-            <img src="IMAGENES/Pato a la naranja.png" alt="Imagen de Receta 1" title="Pato a la narajna" class="card-image">
+        <div class="card" id="tarta">
+            <img src="IMAGENES/TARTA.png" alt="Imagen de Receta 1" title="Pato a la narajna" class="card-image">
             <div class="card-content">
-                <h2 class="card-title">PATO A LA NARANJA</h2>
+                <h2 class="card-title">TARTA DE PHILADELPHIA</h2>
                 <h3 class="card-subtitle">Bis Bistro</h3>
-                <4>NIVEL FACIL  / DURACIÓN 30’</4>
+                <h4>NIVEL FACIL  / DURACIÓN 30’</h4>
                 <br>
                 <br>
-                <button class="card-button">VER RECETAS</button>
+                <button class="card-button"><a class="link2" href="receta tarta.html" title="receta6">VER RECETAS</a></button>
             </div>
         </div>
-        <div class="card">
+        <div class="card" id="ensalada">
             <img src="IMAGENES/ensalada-salad-m 1.png" alt="Imagen de Receta 2" title="ensalada con aiceitunas" class="card-image">
             <div class="card-content">
                 <h2 class="card-title">  ENSALADA CON ACEITUNAS GORDAL</h2>
                 <h3 class="card-subtitle">Mengano</h3>
-                <4>NIVEL FACIL  / DURACIÓN 30’</4>
+                <h4>NIVEL FACIL  / DURACIÓN 30’</h4>
                 <br>
                 <br>
-                <button class="card-button">VER RECETAS</button>
+                <button class="card-button"><a class="link2" href="receta ensalada.html" title="receta7">VER RECETAS</a></button>
             </div>
         </div>
         
     </div>
     
     <div class="grid-container">
-        <div class="card">
-            <img src="IMAGENES/hamburguesa-gambas 1.png" alt="Imagen de Receta 1" title="hamburguesa" class="card-image">
+        <div class="card" id="platos">
+            <img src="IMAGENES/hamburguesa-gambas 2.png" alt="Imagen de Receta 1" title="hamburguesa" class="card-image">
             <div class="card-content">
                 <h2 class="card-title">HAMBURGUESA GAMBAS Y GULAS </h2>
                 <h3 class="card-subtitle">The Burger Company</h3>
-                <4>NIVEL FACIL  / DURACIÓN 30’</4>
+                <h4>NIVEL FACIL  / DURACIÓN 30’</h4>
                 <br>
                 <br>
-                <button class="card-button">VER RECETAS</button>
+                <button class="card-button"><a class="link2" href="receta hamburguersa.html" title="receta8">VER RECETAS</a></button>
             </div>
         </div>
         <div class="card">
@@ -105,42 +112,60 @@
             <div class="card-content">
                 <h2 class="card-title">URAMAKI</h2>
                 <h3 class="card-subtitle">Fabric</h3>
-                <4>NIVEL FACIL  / DURACIÓN 30’</4>
+                <h4>NIVEL FACIL  / DURACIÓN 30’</h4>
                 <br>
                 <br>
-                <button class="card-button">VER RECETAS</button>
+                <button class="card-button"><a class="link2" href="receta sushi.html" title="receta9">VER RECETAS</a></button>
             </div>
         </div>
         
     </div>
 
     <div class="grid-container">
-        <div class="card">
+        <div class="card" id="pastas">
             <img src="IMAGENES/pasta_fBaW4Xh0vdNORixwSAJ9MsK7k6HFQo-1024x683 1.png" alt="Imagen de Receta 1" title="pastas de langostinos" class="card-image">
             <div class="card-content">
                 <h2 class="card-title">PASTAS DE LANGOSTINOS</h2>
                 <h3 class="card-subtitle">Sucre</h3>
-                <4>NIVEL FACIL  / DURACIÓN 30’</4>
+                <h4>NIVEL FACIL  / DURACIÓN 30’</h4>
                 <br>
                 <br>
-                <button class="card-button">VER RECETAS</button>
+                <button class="card-button"><a class="link2" href="receta pastas.html" title="receta10">VER RECETAS</a></button>
 
             </div>
         </div>
-        <div class="card">
-            <img src="IMAGENES/79fca6169d91-wrap-de-sensational-pieces 1.png" alt="Imagen de Receta 2"  title="wrap" class="card-image">
+        <div class="card" id="aperitivos">
+            <img src="IMAGENES/APERITIVOS.png" alt="Imagen de Receta 2"  title="wrap" class="card-image">
             <div class="card-content">
-                <h2 class="card-title">WRAP MEDITERRANEO</h2>
+                <h2 class="card-title">APERITIVOS</h2>
                 <h3 class="card-subtitle">El galpon de tacuara</h3>
-                <4>NIVEL FACIL  / DURACIÓN 30’</4>
+                <h4>NIVEL FACIL  / DURACIÓN 30’</h4>
                 <br>
                 <br>
-                <button class="card-button">VER RECETAS</button>
+                <button class="card-button"><a class="link2" href="receta aperitivos.html" title="receta11">VER RECETAS</a></button>
                 
             </div>
         </div>
         
     </div>
+
+    <button class="floating-button" onclick="openModal()">+</button>
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeModal()">&times;</span>
+            <h2>Sube tu Receta</h2>
+            <form onsubmit="return submitRecipe()">
+                <label for="recipeName">Nombre de la Receta:</label>
+                <input type="text" id="recipeName" name="recipeName" required><br><br>
+                <label for="ingredients">Ingredientes:</label><br>
+                <textarea id="ingredients" name="ingredients" rows="4" cols="50" required></textarea><br><br>
+                <label for="instructions">Instrucciones:</label><br>
+                <textarea id="instructions" name="instructions" rows="4" cols="50" required></textarea><br><br>
+                <input class="subir" type="submit" value="Subir Receta">
+            </form>
+        </div>
+    </div>
+
     <br>
     <br>
     <footer class="footer">
@@ -162,5 +187,7 @@
             </div>
         </div>
     </footer>
+</div>
+<script src="script.js"></script>
 </body>
 </html>
