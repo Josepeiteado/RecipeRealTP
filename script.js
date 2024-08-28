@@ -1,8 +1,8 @@
 function login() {
   var email = document.getElementById("email").value;
   var password = document.getElementById("password").value;
-}
-
+  
+};
   function SeguirBoton(){
     var boton = document.getElementById("seguir");
     if (    boton.textContent == "Seguir"    ) {
@@ -27,8 +27,10 @@ window.addEventListener('load', function() { //cuando los elementos cargen...
       document.getElementById('cargador').style.display = 'block'; //Mostramos la felicitacion
       
       document.body.style.overflow = 'auto'; // Permitimos el desplazamiento
-  }, 2000); // 3000 milisegundos = 3 segundos
+  }, 500); // 3000 milisegundos = 3 segundos
 });
+
+
 
 
 function searchRecipe() {
@@ -50,41 +52,219 @@ function searchRecipe() {
     window.location.href = 'receta tarta.html';
   } else if (query === 'sopa') {
     window.location.href = 'Receta.html';
-  }
+  } else if (query === 'kansas') {
+  window.location.href = 'Mi restaurante.html';
+  
+}
   else {
       alert('No se encontró la receta. Intenta con otra palabra.');
   }
 
-  return false; // Prevenir el envío del formulario
+  return false; 
 }
 
-// Función para abrir la ventana emergente
+
 function openModal() {
   document.getElementById('myModal').style.display = "block";
 }
 
-// Función para cerrar la ventana emergente
 function closeModal() {
   document.getElementById('myModal').style.display = "none";
 }
 
-// Cerrar la ventana emergente cuando el usuario hace clic fuera de ella
+
+// Función para mostrar el modal
+function openModal() {
+  var modal = document.getElementById('myModal');
+  modal.style.display = "block";
+  // Desactivar el desplazamiento del body
+  document.body.style.overflow = "hidden";
+}
+
+// Función para cerrar el modal
+function closeModal() {
+  var modal = document.getElementById('myModal');
+  modal.style.display = "none";
+  // Habilitar el desplazamiento del body
+  document.body.style.overflow = "auto";
+}
+
+// Event listener para el clic fuera del modal
 window.onclick = function(event) {
   var modal = document.getElementById('myModal');
   if (event.target === modal) {
-      modal.style.display = "none";
+    closeModal();
   }
 }
-function submitRecipe() {
-  // Mostrar alerta de éxito
-  alert('La receta se ha subido con éxito');
-  
-  // Cerrar la ventana emergente
-  closeModal();
-  
-  // Limpiar el formulario (opcional)
-  document.querySelector('#myModal form').reset();
 
-  // Prevenir el envío real del formulario (puedes cambiar esto si deseas un comportamiento diferente)
+// Función para manejar el envío del formulario
+function submitRecipe() {
+  alert('La receta se ha subido con éxito');
+  closeModal();
+  document.querySelector('#myModal form').reset();
   return false;
 }
+
+
+  // Obtener el modal
+  var modal = document.getElementById("miVentana");
+
+  // Obtener el elemento que abre el modal
+  var btn = document.getElementById("abrirVentana");
+
+  // Obtener el elemento <span> que cierra el modal
+  var span = document.getElementsByClassName("boton-cerrar")[0];
+
+  // Cuando el usuario hace clic en el texto, abre el modal y deshabilita el scroll
+  btn.onclick = function() {
+      modal.style.display = "block";
+      document.body.classList.add("sin-scroll");
+  }
+
+  // Cuando el usuario hace clic en <span> (x), cierra el modal y habilita el scroll
+  span.onclick = function() {
+      modal.style.display = "none";
+      document.body.classList.remove("sin-scroll");
+  }
+
+  // Cuando el usuario hace clic fuera del modal, lo cierra y habilita el scroll
+  window.onclick = function(event) {
+      if (event.target == modal) {
+          modal.style.display = "none";
+          document.body.classList.remove("sin-scroll");
+      }
+  }
+
+
+document.getElementById('followersButton').onclick = function() {
+  openPopup();
+};
+
+// Función para abrir el popup
+function openPopup() {
+  document.getElementById('followersPopup').style.display = 'block';
+  // Desactivar el scroll en el body
+  document.body.classList.add('no-scroll');
+  // Aquí puedes cargar la lista de seguidores dinámicamente
+  loadFollowers();
+}
+
+// Función para cerrar el popup
+function closePopup() {
+  document.getElementById('followersPopup').style.display = 'none';
+  // Activar el scroll en el body
+  document.body.classList.remove('no-scroll');
+}
+
+// Función para cargar seguidores en el popup
+function loadFollowers() {
+  const followers = [
+    { name: 'Juan Pérez', username: '@juanp', photo: 'IMAGENES/Classic gradient 02-Photoroom (4).png' },
+    { name: 'Antonio López', username: '@antonioL', photo: 'IMAGENES/Classic gradient 02-Photoroom (5).png' },
+    { name: 'Maria Castro', username: '@mariac', photo: 'IMAGENES/Classic gradient 02-Photoroodsdsm (3).png' },
+    { name: 'Beatriz Diez', username: '@bead', photo: 'IMAGENES/Classic gradient 02-Photoroom (6).png' },
+    { name: 'Andrea Gomez', username: '@andreg', photo: 'IMAGENES/Professional 01-Photoroom.jpg' },
+  ];
+
+  const followersContainer = document.getElementById('followersContainer');
+  followersContainer.innerHTML = ''; // Limpiar la lista antes de agregar nuevos seguidores
+
+  followers.forEach(follower => {
+      const followerItem = document.createElement('div');
+      followerItem.className = 'follower-item';
+
+      const photo = document.createElement('img');
+      photo.src = follower.photo;
+      photo.alt = follower.name;
+      photo.className = 'follower-photo';
+
+      const info = document.createElement('div');
+      info.className = 'follower-info';
+
+      const name = document.createElement('div');
+      name.className = 'follower-name';
+      name.textContent = follower.name;
+
+      const username = document.createElement('div');
+      username.className = 'follower-username';
+      username.textContent = follower.username;
+
+      info.appendChild(name);
+      info.appendChild(username);
+
+      followerItem.appendChild(photo);
+      followerItem.appendChild(info);
+
+      followersContainer.appendChild(followerItem);
+  });
+}
+
+// script.js
+
+document.getElementById('openFollowingPopup').onclick = function() {
+  openFollowingModal();
+};
+
+// Función para abrir el modal de siguiendo
+function openFollowingModal() {
+  document.getElementById('followingModal').style.display = 'block';
+  // Desactivar el scroll en el body
+  document.body.classList.add('no-scroll');
+  // Aquí puedes cargar la lista de siguiendo dinámicamente
+  loadFollowing();
+}
+
+// Función para cerrar el modal de siguiendo
+function closeFollowingModal() {
+  document.getElementById('followingModal').style.display = 'none';
+  // Activar el scroll en el body
+  document.body.classList.remove('no-scroll');
+}
+
+// Función para cargar siguiendo en el modal
+function loadFollowing() {
+  const followingList = [
+    { name: 'Juan Pérez', username: '@juanp', photo: 'IMAGENES/Classic gradient 02-Photoroom (4).png' },
+    { name: 'Antonio López', username: '@antonioL', photo: 'IMAGENES/Classic gradient 02-Photoroom (5).png' },
+    { name: 'Maria Castro', username: '@mariac', photo: 'IMAGENES/Classic gradient 02-Photoroodsdsm (3).png' },
+    { name: 'Beatriz Diez', username: '@bead', photo: 'IMAGENES/Classic gradient 02-Photoroom (6).png' },
+    { name: 'Andrea Gomez', username: '@andreg', photo: 'IMAGENES/Professional 01-Photoroom.jpg' },
+      // Agrega más seguidos aquí
+  ];
+
+  const followingContainer = document.getElementById('followingList');
+  followingContainer.innerHTML = ''; // Limpiar la lista antes de agregar nuevos seguidos
+
+  followingList.forEach(person => {
+      const followingItem = document.createElement('div');
+      followingItem.className = 'following-item';
+
+      const avatar = document.createElement('img');
+      avatar.src = person.photo;
+      avatar.alt = person.name;
+      avatar.className = 'following-avatar';
+
+      const details = document.createElement('div');
+      details.className = 'following-details';
+
+      const name = document.createElement('div');
+      name.className = 'following-name';
+      name.textContent = person.name;
+
+      const username = document.createElement('div');
+      username.className = 'following-username';
+      username.textContent = person.username;
+
+      details.appendChild(name);
+      details.appendChild(username);
+
+      followingItem.appendChild(avatar);
+      followingItem.appendChild(details);
+
+      followingContainer.appendChild(followingItem);
+  });
+}
+
+
+
+
