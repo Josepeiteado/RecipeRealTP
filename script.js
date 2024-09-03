@@ -265,6 +265,32 @@ function loadFollowing() {
   });
 }
 
+class FooterComponent extends HTMLElement {
+  connectedCallback() {
+    this.innerHTML = 
+    `<footer class="footer">
+        <div class="footer-content">
+            <img src="IMAGENES/recipe realm2.png" alt="Logo de la Empresa" title="logo de la empresa" class="footer-logo">
+            <div class="social-icons">
+                <a href="https://www.facebook.com" target="_blank" class="social-icon" title="red facebook">
+                    <img src="IMAGENES/facebook.png" alt="Facebook" title="facebook">
+                </a>
+                <a href="https://www.instagram.com" target="_blank" class="social-icon" title="red instagram">
+                    <img src="IMAGENES/Insta.png" alt="Instragram" title="instagram">
+                </a>
+                <a href="https://www.tiktok.com" target="_blank" class="social-icon" title="red tiktok">
+                    <img src="IMAGENES/Tiktok.png" alt="TikTok" title="tiktok">
+                </a>
+                <a href="https://www.youtube.com" target="_blank" class="social-icon" title="red youtube">
+                    <img src="IMAGENES/Youtube.png" alt="Youtube" title="youtube">
+                </a>
+            </div>
+        </div>
+    </footer>`;
+  }
+}
+customElements.define('footer-component', FooterComponent);
+
 
 
 

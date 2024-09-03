@@ -814,7 +814,7 @@ button:hover {
 
 
 .card4 {
-  border-radius: 35px;
+  border-radius: 57px;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   background-color: #ECE5E5;
@@ -1357,7 +1357,7 @@ body.sin-scroll {
   }
 
   .pizza, .ensalada, .postres, .pastas, .platos, .aperitivos {
-    width: 50px; /* Reduce el ancho de los elementos para pantallas pequeñas */
+    width: 60px; /* Reduce el ancho de los elementos para pantallas pequeñas */
     padding: 10px; /* Ajusta el padding */
   }
 
@@ -1400,8 +1400,9 @@ body.sin-scroll {
   .grid-container {
     grid-template-columns: 1fr; /* Cambia a una sola columna en pantallas pequeñas */
     gap: 15px; /* Reduce el espacio entre las tarjetas */
-    width: 95%; /* Ajusta el ancho del contenedor en pantallas pequeñas */
+    width: 85%; /* Ajusta el ancho del contenedor en pantallas pequeñas */
     margin-top: 40px; /* Reduce el margen superior */
+    margin-left:50px;
   }
 
   .card-button {
@@ -1422,4 +1423,249 @@ body.sin-scroll {
   }
 }
 
+/* Estilos para pantallas grandes como 1920x1080 */
+@media (min-width: 1920px) {
+  .menu {
+    width: 80%; /* Aumenta el ancho del menú en pantallas grandes */
+  }
+
+  .menu-item.left, .menu-item.right {
+    padding-left: 40px; /* Espacio adicional para pantallas muy grandes */
+    padding-right: 40px;
+  }
+
+  .imagenes, .imagenes1 {
+    width: 40px; /* Aumenta el tamaño de las imágenes en pantallas grandes */
+  }
+}
+
+/* Estilos para aplicaciones (pueden incluir pantallas táctiles, etc.) */
+@media (pointer: coarse) {
+  .menu-item img {
+    max-height: 60px; /* Tamaño mayor para aplicaciones táctiles */
+  }
+
+  .imagenes, .imagenes1 {
+    width: 40px; /* Tamaño mayor para aplicaciones táctiles */
+  }
+
+  .menu-item {
+    padding: 15px; /* Mayor área táctil en aplicaciones */
+  }
+}
+
+/* Estilos para pantallas grandes (ej. 1920x1080) */
+@media (min-width: 1920px) {
+  .menu {
+    width: 80%; /* Aumenta el ancho del menú en pantallas grandes */
+  }
+
+  .menu-item.left, .menu-item.right {
+    padding-left: 20px; /* Mayor espacio en pantallas grandes */
+    padding-right: 20px;
+  }
+
+  .imagenes, .imagenes1 {
+    width: 40px; /* Aumenta el tamaño de las imágenes */
+  }
+}
+
+/* Estilos para pantallas de tamaño medio (ej. tablets) */
+@media (max-width: 1024px) {
+  .menu {
+    width: 90%; /* Aumenta el ancho del menú en pantallas medianas */
+  }
+  
+  .menu-item.left, .menu-item.right {
+    padding-left: 15px; /* Ajusta padding para pantallas medianas */
+    padding-right: 15px;
+  }
+  
+  .imagenes, .imagenes1 {
+    width: 35px; /* Tamaño de las imágenes en pantallas medianas */
+  }
+}
+
+/* Estilos para pantallas pequeñas (ej. móviles) */
+@media (max-width: 768px) {
+  .menu {
+    width: 100%;
+    padding: 0 10px; /* Añade padding en pantallas pequeñas */
+  }
+
+  .menu-item.left, .menu-item.right {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .menu-item.center {
+    margin: 0;
+    width: auto;
+  }
+
+  .imagenes, .imagenes1 {
+    width: 30px; /* Ajusta el tamaño de las imágenes para pantallas pequeñas */
+    margin-left: 3px;
+  }
+
+  .logo{
+    width: 70%;
+    margin-right: 100px;
+  }
+  .container{
+    width: 70%;
+    margin-left: 15%;
+  
+  }
+
+  .image-container{
+    display: none;
+  }
+
+  .botoprincipal{
+    margin-left:20%;
+  }
+
+  .butonr{
+    margin-left:20%;
+  }
+
+  .img43{
+    display: none;
+  }
+
+  .ciudad{
+    margin-left: 52%;
+  }
+
+  .cliente3{
+    margin-left: 52%;
+  }
+
+  .ciudad2{
+    margin-left:52%;
+  }
+
+  .cliente{
+    margin-left: 52%;
+  }
+
+  .pregunta3{
+    margin-left: 10%;
+  }
+
+  .boto2{
+    height: 20%;
+    margin-left: 30%;
+  }
+
+  .buton3{
+    margin-left: 30%;
+  }
+
+  
+}
+
+
+
+
+
+/* Estilos responsivos */
+
+/* Pantallas grandes (ej. 1920x1080) */
+@media (min-width: 1920px) {
+  .login-form, .login-form2 {
+    width: 50%; /* Ajusta el ancho del formulario en pantallas grandes */
+    max-width: 600px; /* Aumenta el tamaño máximo para pantallas grandes */
+  }
+
+  .botoprincipal, .butonr {
+    max-width: 200px; /* Tamaño máximo del botón en pantallas grandes */
+  }
+
+  .container3 {
+    width: 70%; /* Ajusta el ancho del contenedor en pantallas grandes */
+  }
+
+  
+
+  .right form {
+    width: 100%;
+    max-width: 500px; /* Ajusta el tamaño máximo del formulario */
+  }
+  .banner{
+    width: 100%;
+  }
+
+  .logo{
+    margin-left:25%;
+  }
+
+  .container{
+    height: 100%;
+    width: 60%;
+    padding: 10px;
+    margin-left:25%;
+    margin-top:10%;
+  }
+
+  .botoprincipal{
+    margin-left:25%;
+  }
+
+  .butonr{
+    margin-left:25%;
+  }
+
+  .left{
+    width: 10%;
+    height: 570px;
+  }
+
+  .img43{
+    width: 900px;
+  }
+
+  .ciudad{
+    margin-left:50%;
+  }
+
+  .boto2{
+    margin-left:25%;
+  }
+  .pregunta{
+    margin-left: 28%;
+  }
+  .buton3{
+    margin-left:25%;
+  }
+}
+
+
+
+/* Pantallas pequeñas y dispositivos móviles */
+@media (max-width: 768px) {
+  .login-form, .login-form2 {
+    width: 90%; /* Ajusta el ancho en pantallas pequeñas */
+  }
+
+  .botoprincipal, .butonr {
+    max-width: 100%; /* Ajusta el tamaño máximo del botón */
+  }
+
+  .container3 {
+    flex-direction: column; /* Apila los elementos verticalmente */
+  }
+
+  .left, .right {
+    width: 100%; /* Ajusta el ancho de los elementos */
+    padding: 10px;
+  }
+
+ 
+
+  .banner{
+    width: 100%;
+  }
+}
 
