@@ -11,20 +11,11 @@
     <meta name="publisher" content="Alvarez, Palacios, Peiteado y Rocco">
     <title>Restaurante- Kansas direntes menus</title>
     <link rel="stylesheet" href="style.css">
+    <script src="Script2.js"></script>
     
 </head>
 <body>
-    <header>
-        <nav>
-            <ul class="menu">
-                <li class="menu-item left"><a href="Perfil.html" title="profil- kan"><img class="perfil" src="IMAGENES/Perfil.png" alt="Icono Izquierdo" title="perfil restaurant"></a></li>
-                <li class="menu-item center"><a href="#" title="logo kan"><img class="logo2" src="IMAGENES/recipe realm.png" alt="Logo" title="Lgo restaurant"></a></li>
-                <li class="menu-item right"><a href="Inicio.html" title="casa kan"><img class="imagenes1" src="IMAGENES/casa.png" alt="Icono Derecho 1" title="casa restaurant"></a></li>
-                <li class="menu-item right"><a href="index.html" title="salida kan"><img class="imagenes" src="IMAGENES/salida.png" alt="Icono Derecho 2" title="salida restaurant"></a></li>
-            </ul>
-        </nav>
-    </header>
-
+    <header-component></header-component>
     <div class="profile-container">
         <div class="banner2">
             <img src="IMAGENES/banner kansas.png" alt="Banner" class="banner2-image" title="banner">
@@ -38,13 +29,13 @@
             <h1 class="profile-name">Kansas_Arg</h1>
             <p class="profile-bio">@Kansas_Argentina</p>
             <br>
-            <!-- Texto que abre el modal -->
+            
 <p id="abrirVentana" style="cursor:pointer; color:blue; text-decoration:underline;">Ubicación</p>
 
-<!-- El Modal -->
+
 <div id="miVentana" class="ventana-emergente">
 
-    <!-- Contenido del modal -->
+    
     <div class="contenido-ventana">
         <span class="boton-cerrar">&times;</span>
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3285.527112028149!2d-58.43495372514883!3d-34.56552675548068!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb5bbbafa8489%3A0x5c29f6a81c24b035!2sAv.%20del%20Libertador%204625%2C%20C1426%20Cdad.%20Aut%C3%B3noma%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1723832810876!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -53,31 +44,31 @@
 </div>
 
 
-           <p>Kansas American Cusine</p>
+           <p class="kansas">Kansas American Cusine</p>
             <p id="openFollowingPopup">3.674 Siguiendo</p>
 
-            <!-- El popup -->
+           
             <div id="followingModal" class="modal-overlay">
                 <div class="modal-content2">
                     <span class="modal-close" onclick="closeFollowingModal()">&times;</span>
                     <h2>Siguiendo</h2>
                     <div id="followingList" class="following-list">
-                        <!-- Los seguidos se llenarán aquí mediante JavaScript -->
+                       
                     </div>
                 </div>
             </div>
 
 
-            <!-- Texto que abre el modal -->
+           
     <p id="followersButton">50K Seguidores</p>
 
-    <!-- El modal -->
+   
     <div id="followersPopup" class="popup">
         <div class="popup-content">
             <span class="popup-close" onclick="closePopup()">&times;</span>
             <h2>Seguidores</h2>
             <div id="followersContainer" class="followers-container">
-                <!-- Los seguidores se llenarán aquí mediante JavaScript -->
+                
             </div>
         </div>
     </div>
@@ -175,26 +166,7 @@
     </div>
         <br>
         <br>
-        <footer class="footer">
-            <div class="footer-content">
-                <img src="IMAGENES/recipe realm2.png" alt="Logo de la Empresa" class="footer-logo" title="img kansas">
-                <div class="social-icons">
-                    <a href="https://www.facebook.com" target="_blank" class="social-icon" title="kansas facebook">
-                        <img src="IMAGENES/facebook.png" alt="Facebook" title="facebook kan">
-                    </a>
-                    <a href="https://www.instagram.com" target="_blank" class="social-icon" title="kansas instagram">
-                        <img src="IMAGENES/Insta.png" alt="Instragram" title="instagram kan">
-                    </a>
-                    <a href="https://www.tiktok.com" target="_blank" class="social-icon" title="kansas tiktok">
-                        <img src="IMAGENES/Tiktok.png" alt="TikTok" title="tiktok kan">
-                    </a>
-                    <a href="https://www.youtube.com" target="_blank" class="social-icon" title="kansas youtube">
-                        <img src="IMAGENES/Youtube.png" alt="Youtube" title="youtube kan">
-                    </a>
-                </div>
-            </div>
-        </footer>
-    
+        <footer-component></footer-component> 
     </div>
     <script src="script.js"></script>
     </body>

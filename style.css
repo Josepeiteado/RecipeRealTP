@@ -505,7 +505,7 @@ button:hover {
 }
 
 .comidas{
-  margin-left: 290px;
+  margin-left: 310px;
 }
 
 .pizza{
@@ -649,7 +649,7 @@ button:hover {
 
 .profile-container {
   width: 100%;
-  max-width: 1650px; 
+  max-width: 2000px; 
   margin: 0 auto; 
   background-color: white;
   border: 1px solid #ddd;
@@ -810,6 +810,7 @@ button:hover {
 .recetault{
   background-color: #F49806;
   padding:50px;
+  margin-left:0px;
 }
 
 
@@ -999,7 +1000,6 @@ button:hover {
   color:black;
 }
 
-/* Estilo para el modal (ventana emergente) */
 .ventana-emergente {
   display: none;
   position: fixed;
@@ -1008,11 +1008,11 @@ button:hover {
   top: 0;
   width: 100%;
   height: 100%;
-  overflow: auto; /* Permite el scroll en el modal si es necesario */
+  overflow: auto; 
   background-color: rgba(0, 0, 0, 0.4);
 }
 
-/* Contenido del modal */
+
 .contenido-ventana {
   background-color: #fefefe;
   margin: 15% auto;
@@ -1025,7 +1025,7 @@ button:hover {
   overflow: hidden;
 }
 
-/* Botón de cerrar */
+
 .boton-cerrar {
   color: #aaa;
   float: right;
@@ -1040,36 +1040,36 @@ button:hover {
   cursor: pointer;
 }
 
-/* Clase para deshabilitar el scroll en el cuerpo */
+
 body.sin-scroll {
   overflow: hidden;
 }
 
 
 .popup {
-  display: none; /* Oculto por defecto */
+  display: none; 
   position: fixed;
-  z-index: 1; /* Asegúrate de que esté sobre otros contenidos */
+  z-index: 1; 
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgba(0,0,0,0.4); /* Fondo oscuro con opacidad */
+  background-color: rgba(0,0,0,0.4); 
 }
 
-/* Contenido del popup */
+
 .popup-content {
   background-color: #fefefe;
   margin: 15% auto;
   padding: 20px;
   border: 1px solid #888;
   width: 80%;
-  max-width: 600px; /* Ajusta el tamaño del popup según tus necesidades */
-  border-radius: 8px; /* Bordes redondeados */
+  max-width: 600px; 
+  border-radius: 8px; 
 }
 
-/* Botón de cierre */
+
 .popup-close {
   color: #aaa;
   float: right;
@@ -1084,7 +1084,7 @@ body.sin-scroll {
   cursor: pointer;
 }
 
-/* Estilos para la lista de seguidores */
+
 .followers-container {
   display: flex;
   flex-direction: column;
@@ -1116,35 +1116,35 @@ body.sin-scroll {
   color: grey;
 }
 
-/* Clase para deshabilitar el scroll del body */
+
 .no-scroll {
   overflow: hidden;
 }
 
 .modal-overlay {
-  display: none; /* Oculto por defecto */
+  display: none; 
   position: fixed;
-  z-index: 1; /* Asegúrate de que esté sobre otros contenidos */
+  z-index: 1; 
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgba(0,0,0,0.4); /* Fondo oscuro con opacidad */
+  background-color: rgba(0,0,0,0.4); 
 }
 
-/* Contenido del modal */
+
 .modal-content2 {
   background-color: #fefefe;
   margin: 15% auto;
   padding: 20px;
   border: 1px solid #888;
   width: 80%;
-  max-width: 600px; /* Ajusta el tamaño del modal según tus necesidades */
-  border-radius: 8px; /* Bordes redondeados */
+  max-width: 600px; 
+  border-radius: 8px; 
 }
 
-/* Botón de cierre del modal */
+
 .modal-close {
   color: #aaa;
   float: right;
@@ -1159,7 +1159,7 @@ body.sin-scroll {
   cursor: pointer;
 }
 
-/* Estilos para la lista de siguiendo */
+
 .following-list {
   display: flex;
   flex-direction: column;
@@ -1191,7 +1191,7 @@ body.sin-scroll {
   color: grey;
 }
 
-/* Clase para deshabilitar el scroll del body */
+
 .no-scroll {
   overflow: hidden;
 }
@@ -1201,10 +1201,14 @@ body.sin-scroll {
   color: white;
 }
 
+.perfil1{
+  width: 60px;
+}
 
-
-
-
+.logo2{
+  width: 60%;
+  margin-left:100px;
+}
 
 
 @media (max-width: 768px) {
@@ -1260,237 +1264,240 @@ body.sin-scroll {
 
 @media (max-width: 768px) {
   .perfil {
-    margin-right: 30px; /* Ajusta el margen para pantallas medianas */
+    margin-right: 30px; 
   }
 
   .banner {
-    height: 400px; /* Reduce la altura del banner */
+    height: 400px; 
   }
 
   .banner h1 {
-    font-size: 2em; /* Ajusta el tamaño de la fuente para pantallas medianas */
+    font-size: 2em; 
   }
 
   .banner p {
-    font-size: 1em; /* Ajusta el tamaño del texto para pantallas medianas */
+    font-size: 1em; 
   }
 
   .btn {
-    padding: 8px 16px; /* Ajusta el padding del botón */
-    font-size: 0.9em; /* Ajusta el tamaño de la fuente del botón */
+    padding: 8px 16px; 
+    font-size: 0.9em; 
   }
 
   .search-container {
     flex-direction: column;
-    gap: 10px; /* Añade un espacio entre los elementos */
+    gap: 10px; 
   }
 
   input[type="text"] {
-    width: 100%; /* Hacer que el campo de búsqueda ocupe el ancho completo */
-    max-width: 300px; /* Limita el ancho máximo */
+    width: 100%; 
+    max-width: 300px; 
   }
 
   button {
-    width: 100%; /* Hacer que el botón ocupe el ancho completo */
-    max-width: 300px; /* Limita el ancho máximo */
+    width: 100%; 
+    max-width: 300px; 
   }
 }
 
 
 @media (max-width: 480px) {
   .perfil {
-    margin-right: 0; /* Elimina el margen en pantallas pequeñas */
+    margin-right: 0; 
   }
 
   .banner {
-    height: 300px; /* Reduce aún más la altura del banner */
-    background-size: cover; /* Asegúrate de que la imagen de fondo cubra el contenedor */
+    height: 300px; 
+    background-size: cover;
   }
 
   .banner h1 {
-    font-size: 1.5em; /* Ajusta el tamaño de la fuente para pantallas pequeñas */
+    font-size: 1.5em; 
   }
 
   .banner p {
-    font-size: 0.9em; /* Ajusta el tamaño del texto para pantallas pequeñas */
+    font-size: 0.9em; 
   }
 
   .btn {
-    padding: 6px 12px; /* Ajusta el padding del botón */
-    font-size: 0.8em; /* Ajusta el tamaño de la fuente del botón */
+    padding: 6px 12px; 
+    font-size: 0.8em; 
   }
 
   .search-container {
     flex-direction: column;
-    gap: 5px; /* Reduce el espacio entre los elementos */
+    gap: 5px; 
   }
 
   input[type="text"] {
-    width: 100%; /* Hacer que el campo de búsqueda ocupe el ancho completo */
-    max-width: 280px; /* Limita el ancho máximo */
+    width: 100%; 
+    max-width: 280px; 
   }
 
   button {
-    width: 100%; /* Hacer que el botón ocupe el ancho completo */
-    max-width: 280px; /* Limita el ancho máximo */
+    width: 100%; 
+    max-width: 280px; 
   }
 }
 
 @media (max-width: 1024px) {
   .comidas {
-    margin-left: 20px; /* Ajusta el margen izquierdo en pantallas más pequeñas */
+    margin-left: 20px; 
   }
 
   .pizza, .ensalada, .postres, .pastas, .platos, .aperitivos {
-    width: 60px; /* Reduce el ancho de los elementos para pantallas medianas */
-    padding: 15px; /* Ajusta el padding */
+    width: 60px; 
+    padding: 15px; 
   }
 
   .platos {
-    width: 100px; /* Ajusta el tamaño para elementos específicos */
+    width: 100px; 
   }
 }
 
 @media (max-width: 768px) {
   .comidas {
-    margin-left: 10px; /* Reduce aún más el margen izquierdo */
+    margin-left: 10px; 
   }
 
-  .pizza, .ensalada, .postres, .pastas, .platos, .aperitivos {
-    width: 60px; /* Reduce el ancho de los elementos para pantallas pequeñas */
-    padding: 10px; /* Ajusta el padding */
+  .pizza, .ensalada, .postres, .platos, .aperitivos {
+    width: 50px; 
+    padding: 10px; 
   }
 
+  .pastas{
+    padding:10px;
+    width: 60px;
+  }
   .platos {
-    width: 80px; /* Ajusta el tamaño para pantallas pequeñas */
+    width: 70px; 
   }
 }
 
 @media (max-width: 480px) {
   .comidas {
-    margin-left: 0; /* Elimina el margen izquierdo en pantallas muy pequeñas */
-    text-align: center; /* Opcional: centra el texto si es necesario */
+    margin-left: 0; 
+    text-align: center; 
   }
 
   .pizza, .ensalada, .postres, .pastas, .platos, .aperitivos {
-    width: 40px; /* Reduce el ancho de los elementos aún más para pantallas muy pequeñas */
-    padding: 5px; /* Ajusta el padding */
+    width: 30px; 
+    padding: 5px; 
   }
 
   .platos {
-    width: 60px; /* Ajusta el tamaño para pantallas muy pequeñas */
+    width: 40px; 
   }
 }
 
-/* Estilos responsivos */
 @media (max-width: 1024px) {
   .grid-container {
-    grid-template-columns: repeat(2, 1fr); /* Mantén 2 columnas en pantallas medianas */
-    gap: 20px; /* Reduce el espacio entre las tarjetas */
-    width: 90%; /* Ajusta el ancho del contenedor en pantallas medianas */
-    margin-top: 60px; /* Reduce el margen superior */
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 20px; 
+    width: 90%; 
+    margin-top: 60px; 
   }
 
   .card-button {
-    width: 150px; /* Ajusta el ancho del botón para pantallas medianas */
+    width: 150px; 
   }
 }
 
 @media (max-width: 768px) {
   .grid-container {
-    grid-template-columns: 1fr; /* Cambia a una sola columna en pantallas pequeñas */
-    gap: 15px; /* Reduce el espacio entre las tarjetas */
-    width: 85%; /* Ajusta el ancho del contenedor en pantallas pequeñas */
-    margin-top: 40px; /* Reduce el margen superior */
+    grid-template-columns: 1fr; 
+    gap: 15px; 
+    width: 85%; 
+    margin-top: 40px;
     margin-left:50px;
   }
 
   .card-button {
-    width: 120px; /* Ajusta el ancho del botón para pantallas pequeñas */
+    width: 120px; 
   }
 }
 
 @media (max-width: 480px) {
   .grid-container {
-    grid-template-columns: 1fr; /* Mantén una sola columna en pantallas muy pequeñas */
-    gap: 10px; /* Reduce aún más el espacio entre las tarjetas */
-    width: 100%; /* Utiliza el ancho completo del contenedor */
-    margin-top: 20px; /* Ajusta el margen superior */
+    grid-template-columns: 1fr; 
+    gap: 10px; 
+    width: 100%; 
+    margin-top: 20px;
   }
 
   .card-button {
-    width: 100px; /* Ajusta el ancho del botón para pantallas muy pequeñas */
+    width: 100px; 
   }
 }
 
-/* Estilos para pantallas grandes como 1920x1080 */
+
 @media (min-width: 1920px) {
   .menu {
-    width: 80%; /* Aumenta el ancho del menú en pantallas grandes */
+    width: 80%; 
   }
 
   .menu-item.left, .menu-item.right {
-    padding-left: 40px; /* Espacio adicional para pantallas muy grandes */
+    padding-left: 40px;
     padding-right: 40px;
   }
 
   .imagenes, .imagenes1 {
-    width: 40px; /* Aumenta el tamaño de las imágenes en pantallas grandes */
+    width: 40px; 
   }
 }
 
-/* Estilos para aplicaciones (pueden incluir pantallas táctiles, etc.) */
+
 @media (pointer: coarse) {
   .menu-item img {
-    max-height: 60px; /* Tamaño mayor para aplicaciones táctiles */
+    max-height: 60px; 
   }
 
   .imagenes, .imagenes1 {
-    width: 40px; /* Tamaño mayor para aplicaciones táctiles */
+    width: 40px; 
   }
 
   .menu-item {
-    padding: 15px; /* Mayor área táctil en aplicaciones */
+    padding: 15px; 
   }
 }
 
-/* Estilos para pantallas grandes (ej. 1920x1080) */
+
 @media (min-width: 1920px) {
   .menu {
-    width: 80%; /* Aumenta el ancho del menú en pantallas grandes */
+    width: 80%; 
   }
 
   .menu-item.left, .menu-item.right {
-    padding-left: 20px; /* Mayor espacio en pantallas grandes */
+    padding-left: 20px; 
     padding-right: 20px;
   }
 
   .imagenes, .imagenes1 {
-    width: 40px; /* Aumenta el tamaño de las imágenes */
+    width: 40px; 
   }
 }
 
-/* Estilos para pantallas de tamaño medio (ej. tablets) */
+
 @media (max-width: 1024px) {
   .menu {
-    width: 90%; /* Aumenta el ancho del menú en pantallas medianas */
+    width: 90%; 
   }
   
   .menu-item.left, .menu-item.right {
-    padding-left: 15px; /* Ajusta padding para pantallas medianas */
+    padding-left: 15px; 
     padding-right: 15px;
   }
   
   .imagenes, .imagenes1 {
-    width: 35px; /* Tamaño de las imágenes en pantallas medianas */
+    width: 35px; 
   }
 }
 
-/* Estilos para pantallas pequeñas (ej. móviles) */
+
 @media (max-width: 768px) {
   .menu {
     width: 100%;
-    padding: 0 10px; /* Añade padding en pantallas pequeñas */
+    padding: 0 10px; 
   }
 
   .menu-item.left, .menu-item.right {
@@ -1504,7 +1511,7 @@ body.sin-scroll {
   }
 
   .imagenes, .imagenes1 {
-    width: 30px; /* Ajusta el tamaño de las imágenes para pantallas pequeñas */
+    width: 30px; 
     margin-left: 3px;
   }
 
@@ -1524,6 +1531,7 @@ body.sin-scroll {
 
   .botoprincipal{
     margin-left:20%;
+    margin-top:15%;
   }
 
   .butonr{
@@ -1563,35 +1571,138 @@ body.sin-scroll {
     margin-left: 30%;
   }
 
+  .perfil1{
+    margin-left: 5%;
+    width: 12%;
+  }
+
+  .logo2{
+    margin-left: 70%;
+    width: 100%;
+  }
+
+  .imag3{
+    margin-left: 35%;
+  }
+
+  .grid-container{
+    width: 70%;
+    margin-left: 80px;
+  }
+
+  .card-button{
+    width: 50%;
+  }
   
+  #seguirperfil{
+    margin-left: 75%;
+    margin-top: 25%;
+  }
+  
+  .profile-picture-container{
+    margin-left: 1%;
+  }
+  
+  .profile-name{
+    margin-left: -50%;
+  }
+
+  .profile-bio{
+    margin-left: -50%;
+  }
+
+  .coment{
+    margin-left: -50%;
+  }
+
+  .seguidoress{
+    margin-left: -50%;
+  }
+
+  .seguidores{
+    margin-left: 1%;
+  }
+  .titulos{
+    font-size: 30px;
+    margin-left: 20% ;  }
+ 
+    .card2{
+      margin-left:10%;
+      flex-direction: column;
+      width: 80%;
+    }
+
+    .card2-image{
+      height: 40%;
+    }
+
+    .vermas1{
+      margin-left: 35%;
+    }
+
+    .vermas2{
+      margin-left: 35%;
+    }
+
+    .vermas{
+      margin-left: 28%;
+    }
+
+    #abrirVentana{
+      margin-left: -50%;
+    }
+
+    .kansas{
+      margin-left: -50%;
+    }
+
+    #openFollowingPopup{
+      margin-left: -50%;
+    }
+
+    #followersButton{
+      margin-left: -50%;
+    }
+
+    #seguir{
+      margin-left: 75%;
+    margin-top: 25%;
+    }
+
+    .card4{
+      margin-left: -5%;
+      width: 110%;
+    }
+
+    .comment-input{
+      margin-left:-15%;
+      width: 10px;
+
+    }
+
+    #formulario{
+      margin-left: 1%;
+    }
 }
 
 
-
-
-
-/* Estilos responsivos */
-
-/* Pantallas grandes (ej. 1920x1080) */
 @media (min-width: 1920px) {
   .login-form, .login-form2 {
-    width: 50%; /* Ajusta el ancho del formulario en pantallas grandes */
-    max-width: 600px; /* Aumenta el tamaño máximo para pantallas grandes */
+    width: 50%; 
+    max-width: 600px; 
   }
 
   .botoprincipal, .butonr {
-    max-width: 200px; /* Tamaño máximo del botón en pantallas grandes */
+    max-width: 200px; 
   }
 
   .container3 {
-    width: 70%; /* Ajusta el ancho del contenedor en pantallas grandes */
+    width: 70%; 
   }
-
-  
 
   .right form {
     width: 100%;
-    max-width: 500px; /* Ajusta el tamaño máximo del formulario */
+    max-width: 500px; 
   }
   .banner{
     width: 100%;
@@ -1639,30 +1750,70 @@ body.sin-scroll {
   .buton3{
     margin-left:25%;
   }
+
+.logo2{
+  margin-left: 180px ;
+  width: 50%;
+}
+
+.comidas{
+  margin-left: 450px;
+  
+}
+
+.pizza, .ensalada, .postres, .pastas, .platos, .aperitivos {
+  padding: 40px; 
+}
+
+.grid-container{
+  margin-left:580px;
+}
+
+.profile-picture-container{
+  margin-bottom: 17%;
+}
+
+#seguirperfil{
+  margin-left: 80%;
+}
+
+section{
+  margin-left: 180px;
+}
+
+#seguir{
+  margin-left: 80%;
+}
+
+.card4{
+  margin-left: 650px;
+}
+
+.profile-container{
+  width: 100%;
+}
 }
 
 
 
-/* Pantallas pequeñas y dispositivos móviles */
+
 @media (max-width: 768px) {
   .login-form, .login-form2 {
-    width: 90%; /* Ajusta el ancho en pantallas pequeñas */
+    width: 90%; 
   }
 
   .botoprincipal, .butonr {
-    max-width: 100%; /* Ajusta el tamaño máximo del botón */
+    max-width: 100%; 
   }
 
   .container3 {
-    flex-direction: column; /* Apila los elementos verticalmente */
+    flex-direction: column; 
   }
 
   .left, .right {
-    width: 100%; /* Ajusta el ancho de los elementos */
+    width: 100%; 
     padding: 10px;
   }
-
- 
 
   .banner{
     width: 100%;

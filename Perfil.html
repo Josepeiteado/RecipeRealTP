@@ -11,22 +11,16 @@
     <meta name="publisher" content="Alvarez, Palacios, Peiteado y Rocco">
     <title>Perfil del usuario- Ana Garcia</title>
     <link rel="stylesheet" href="style.css">
+    <script src="Script2.js"></script>
+    
+    
 </head>
 <body>
     <div id="loaderContainer"> 
         <div id="loader"></div>
     </div>
     <div id="cargador">
-    <header>
-        <nav>
-            <ul class="menu">
-                <li class="menu-item left"><a href="#" title="perfil garcia"><img class="perfil" src="IMAGENES/Perfil.png" alt="Icono Izquierdo" title="perfil ana"></a></li>
-                <li class="menu-item center"><a href="#" title="logo garcia"><img class="logo2" src="IMAGENES/recipe realm.png" alt="Logo" title="logo ana"></a></li>
-                <li class="menu-item right"><a href="Inicio.html" title="casa garcia"><img class="imagenes1" src="IMAGENES/casa.png" alt="Icono Derecho 1" title="casa ana"></a></li>
-                <li class="menu-item right"><a href="index.html" title="salida garcia"><img class="imagenes" src="IMAGENES/salida.png" alt="Icono Derecho 2" title="salida ana"></a></li>
-            </ul>
-        </nav>
-    </header>
+        <header-component></header-component>
 
     <div class="profile-container">
         <div class="banner2">
@@ -41,11 +35,11 @@
             <h1 class="profile-name">Ana.García</h1>
             <p class="profile-bio">@ana.garcia.24</p>
             <p class="coment">Mis comentarios</p>
-            <br>
-            <p><b>3.674</b> Siguiendo</p>
+            <p class="seguidoress"><b>3.674</b> Siguiendo</p>
             <p class="seguidores"><b>50K</b> Seguidores</p>  
         </div>
 
+    
         <section>
         <h2 class="titulos">Recetas Publicadas</h2>
         <div class="card2">
@@ -126,28 +120,9 @@
     </div>
         <br>
         <br>
-        <footer class="footer">
-            <div class="footer-content">
-                <img src="IMAGENES/recipe realm2.png" alt="Logo de la Empresa" class="footer-logo" title="logo footer">
-                <div class="social-icons">
-                    <a href="https://www.facebook.com" target="_blank" class="social-icon" title="face">
-                        <img src="IMAGENES/facebook.png" alt="Facebook" title="facebook ana">
-                    </a>
-                    <a href="https://www.instagram.com" target="_blank" class="social-icon" title="insta">
-                        <img src="IMAGENES/Insta.png" alt="Instragram" title="instagram ana">
-                    </a>
-                    <a href="https://www.tiktok.com" target="_blank" class="social-icon" title="tik">
-                        <img src="IMAGENES/Tiktok.png" alt="TikTok" title="tiktok ana">
-                    </a>
-                    <a href="https://www.youtube.com" target="_blank" class="social-icon" title="you">
-                        <img src="IMAGENES/Youtube.png" alt="Youtube" title="youtube ana">
-                    </a>
-                </div>
-            </div>
-        </footer>
+        <footer-component></footer-component>
      </div>
     </div>
     <script src="script.js"></script>
-    <script scr="script2.js"></script>
     </body>
     </html>
