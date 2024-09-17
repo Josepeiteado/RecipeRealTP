@@ -14,6 +14,7 @@
     <script src="Script2.js"></script>
     
     
+    
 </head>
 <body>
     <div id="loaderContainer"> 
@@ -29,17 +30,46 @@
         <div class="profile-picture-container">
             <img src="IMAGENES/perfil ana.png" alt="Foto de Perfil" class="profile-picture" width="20%" title="img ana">
         </div>
-        <button id="seguirperfil">Mi perfil</button>
-        <br>
+        <button id="seguirperfil" class="btn-perfil">Mi perfil</button>
+
+       
+        
+
+    
+
         <div class="profile-details">
             <h1 class="profile-name">Ana.García</h1>
             <p class="profile-bio">@ana.garcia.24</p>
-            <p class="coment">Mis comentarios</p>
-            <p class="seguidoress"><b>3.674</b> Siguiendo</p>
-            <p class="seguidores"><b>50K</b> Seguidores</p>  
-        </div>
+            <p  class="coment">Mis comentarios</p>
+            <p id="openFollowingPopup">3.674 Siguiendo</p>
 
-    
+           
+            <div id="followingModal" class="modal-overlay">
+                <div class="modal-content2">
+                    <span class="modal-close" onclick="closeFollowingModal()">&times;</span>
+                    <h2>Siguiendo</h2>
+                    <div id="followingList" class="following-list">
+                       
+                    </div>
+                </div>
+            </div>
+
+
+           
+    <p id="followersButton">50K Seguidores</p>
+
+   
+    <div id="followersPopup" class="popup">
+        <div class="popup-content">
+            <span class="popup-close" onclick="closePopup()">&times;</span>
+            <h2>Seguidores</h2>
+            <div id="followersContainer" class="followers-container">
+                
+            </div>
+        </div>
+    </div>
+
+        </div>
         <section>
         <h2 class="titulos">Recetas Publicadas</h2>
         <div class="card2">
@@ -62,11 +92,7 @@
                     <li>Plástico film</li>
                 </ul>
                 </p>
-                <p>Empezamos con el arroz
-                    Lava el arroz con agua en un colador hasta que expulse todo el almidón. Luego añade el 
-                    arroz en un cazo con agua (que sobrepase muy poquito el arroz, unos 3 centímetros 
-                    aproximadamente por encima).</p>
-                    <button class="vermas1">Ver más</button>
+                    <a href="receta sushi.html"><button class="vermas1">Ver más</button></a>
             </div>
         </div>
         <br>
@@ -91,13 +117,8 @@
                         <li>Sal (al gusto)</li>
                  </p>
                 
-                <p>
-                    Horneado y preparación del pato.<br>Pelamos una naranja, la abrimos en 4 partes. 
-                    La dejamos durante 1 hora macerando en un bol con ½ vaso de brandy.Limpiamos 
-                    el pato de restos de grasa y plumas que pueda tener. Lo limpiamos bien con 
-                    papel de cocina, por fuera y por dentro.</p>
             
-                <button class="vermas">Ver más</button>
+                <a href="PATO A LA NARANJA.html"><button class="vermas">Ver más</button></a>
             </div>
         </div>
         </section>

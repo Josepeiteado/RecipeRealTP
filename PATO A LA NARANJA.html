@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Recipe Realm es una pagina web para ayudarte a encontrar lo que quieras para cocinar, te brinda los ingredientes y te da toda la información necesaria para que puedas hacerlo">
+    <meta name="keywords" content="Ingredientes, cocinar, preparación, Recetas,seguir, información">
+    <link rel="canonical" href="www.reciperealm.com">
+    <meta name="robots" content="www.reciperealm.com">
+    <meta name="author" content="Alvarez, Palacios, Peiteado y Rocco">
+    <meta name="publisher" content="Alvarez, Palacios, Peiteado y Rocco">
+    <title>Receta- Aperitivos- ingredientes y preparación</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="Script2.js"></script>
+    
+</head>
+<body>
+    <header-component></header-component>
+    <section class="recetault">
+        <div class="card4">
+            <div class="card4-image">
+                <img class="urakami" src="IMAGENES/Pato a la naranja.png" alt="Imagen de la tarjeta" title="Pato a la naranjaa">
+            </div>
+            <div class="card4-content">
+                <div class="card2-icons">
+                    <i class="icon"><img src="IMAGENES/icono1.png" alt="icono 1" title="ico 1"></i>
+                    <i class="icon"  id="abrirModal"><img src="IMAGENES/icono2.png" alt="icnono 2" title="ico 2"></i> 
+                    <i class="icon"><img src="IMAGENES/icono3.png" alt="icnono 3" title="ico 3"></i>
+                </div>
+
+                
+                <h1>PATO A LA NARANJA</h1>
+                <h2>Bis Bistro</h2>
+                <p>NIVEL FÁCIL  / DURACIÓN 30’</p>
+                <br>
+                <ul></ul>
+                Ingredientes
+                    <li>1 pato de 1,4 kg. (aproximadamente)</li>
+                    <li>4 naranjas de zumo</li>
+                    <li>75 g. azúcar</li>
+                    <li>50 ml. vinagre</li>
+                    <li>1 vaso brandy (200 ml de líquido)</li>
+                    <li>½ vaso de agua (100 ml. de líquido)</li>
+                    <li>Sal (al gusto)</li>
+                    
+                </ul>
+                    <br>
+                    <br>
+            <p class="preparacion">Preparación
+                <br>
+            
+                <ul>
+               <li> Horneado y preparación del pato.
+                Pelamos una naranja, la abrimos en 4 partes. La dejamos durante 1 hora macerando en un bol con ½ vaso de brandy.Limpiamos el pato de restos de grasa y plumas que pueda tener. Lo limpiamos bien con papel de cocina, por fuera y por dentro.</li>
+                 
+    
+            </ul>
+            </div>
+            <div class="comment-container">
+            <div class="comment-photo">
+                <img src="IMAGENES/perfil ana.png" alt="Foto del usuario" title="perfil">
+            </div>
+            <div class="comment-input">
+                <input type="text" placeholder="Escribe un comentario..."><img onclick="enviar()" id="formulario" class="mensaj"src="IMAGENES/mensaje.png" alt="mensaje" title="receta mensaje">
+            </div>
+        </div>
+        </div>
+
+    
+
+
+    </section>
+
+    <button class="floating-button" onclick="openModal()">+</button>
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeModal()">&times;</span>
+            <h2>Sube tu Receta</h2>
+            <form onsubmit="return submitRecipe()">
+                <label for="recipeName">Nombre de la Receta:</label>
+                <input type="text" id="recipeName" name="recipeName" required><br><br>
+                <label for="ingredients">Ingredientes:</label><br>
+                <textarea id="ingredients" name="ingredients" rows="4" cols="50" required></textarea><br><br>
+                <label for="instructions">Instrucciones:</label><br>
+                <textarea id="instructions" name="instructions" rows="4" cols="50" required></textarea><br><br>
+                <input class="subir" type="submit" value="Subir Receta">
+            </form>
+        </div>
+    </div>
+
+    <footer-component></footer-component>
+
+</div>
+<script src="script.js"></script>
+</body>
+</html>

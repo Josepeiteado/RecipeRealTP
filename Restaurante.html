@@ -11,6 +11,7 @@
     <meta name="publisher" content="Alvarez, Palacios, Peiteado y Rocco">
     <title>Página de Inicio de Sesión para restaurentes</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
 </head>
 <body class="propiedades">
     <div class="container3">
@@ -26,10 +27,12 @@
                 <input class="ciudad" type="text2" placeholder="Ciudad" id="email">
                 <p>Email</p>
                 <input type="email" placeholder="Correo Electrónico" id="email">
+                <div id="emailError" class="error-message"></div>
                 <p>Contraseña</p>
                 <input type="password" placeholder="Contraseña" id="password">
+                <div id="passwordError" class="error-message"></div>
                 <p class="pregunta3"> Si sos cliente <a class="link" href="Cliente.html" title="cliente">Haz click aquí</a></p>
-                <button class="boto2" onclick="login()"><a class="subrayadocliente" href="Inicio.html">Registrarse</a></button>
+                <button class="boto2" onclick="return validateForm()"><a class="subrayadocliente" href="Inicio.html">Registrarse</a></button>
                 <p class="pregunta">¿Ya tenes una cuenta? </p>
                 <button class="buton3"onclick="login()"><a class="link2" href="index.html" title="iniciar sesion">Iniciar Sesión</a></button>
                 <br>

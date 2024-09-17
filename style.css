@@ -320,7 +320,7 @@ input[type="text"]{
 
 .ciudad{
   margin-left: 200px;
-  margin-top:-42px;
+  margin-top:-50px;
   display: flex;
   width: 40px;
 }
@@ -417,6 +417,7 @@ nav {
 
 .logo2{
   width: 100%;
+  margin-left: 200px;
 }
 
 .banner {
@@ -927,7 +928,7 @@ button:hover {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background-color: #F49806;
+  background-color: #e7a843;
   color: white;
   border: none;
   border-radius: 50%;
@@ -936,9 +937,13 @@ button:hover {
   font-size: 30px;
   text-align: center;
   cursor: pointer;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.2);
   z-index: 1000; 
 }
+
+.floating-button:hover{
+  background-color:#c48727;
+} 
 
 .modal {
   display: none; 
@@ -1206,8 +1211,19 @@ body.sin-scroll {
 }
 
 .logo2{
-  width: 60%;
-  margin-left:100px;
+  width: 100%;
+  margin-left:80px;
+}
+
+.error-message {
+  color: red;
+  font-size: 0.875em;
+  margin-top: 5
+  px;
+  margin-bottom: 10px;
+}
+.imagenes1{
+  margin-left: 300px;
 }
 
 
@@ -1521,7 +1537,9 @@ body.sin-scroll {
   }
   .container{
     width: 70%;
+    height: 60%;
     margin-left: 15%;
+    margin-top: 10%;
   
   }
 
@@ -1531,7 +1549,7 @@ body.sin-scroll {
 
   .botoprincipal{
     margin-left:20%;
-    margin-top:15%;
+    margin-top:0%;
   }
 
   .butonr{
@@ -1577,7 +1595,7 @@ body.sin-scroll {
   }
 
   .logo2{
-    margin-left: 70%;
+    margin-left: 60%;
     width: 100%;
   }
 
@@ -1819,4 +1837,3 @@ section{
     width: 100%;
   }
 }
-

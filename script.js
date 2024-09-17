@@ -1,8 +1,36 @@
 
-function login() {
-  var email = document.getElementById("email").value;
-  var password = document.getElementById("password").value;
+function validateForm() {
+  
+  const email = document.getElementById('email').value.trim();
+  const password = document.getElementById('password').value.trim();
+
+
+  const emailError = document.getElementById('emailError');
+  const passwordError = document.getElementById('passwordError');
+
+ 
+  emailError.textContent = '';
+  passwordError.textContent = '';
+
+  
+  let valid = true;
+
+  
+  if (email === '') {
+      emailError.textContent = 'El campo de email es obligatorio.';
+      valid = false;
+  }
+
+  
+  if (password === '') {
+      passwordError.textContent = 'El campo de contraseña es obligatorio.';
+      valid = false;
+  }
+
+  
+  return valid;
 }
+
 
 
 function SeguirBoton() {
