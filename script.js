@@ -88,6 +88,7 @@ function searchRecipe() {
 function openModal() {
   var modal = document.getElementById('myModal');
   modal.style.display = "block";
+  modal.style.overflow = "hidden";
   document.body.style.overflow = "hidden";
 }
 
@@ -96,6 +97,7 @@ function closeModal() {
   var modal = document.getElementById('myModal');
   modal.style.display = "none";
   document.body.style.overflow = "auto";
+  modal.style.overflow = "auto";
 }
 
 
