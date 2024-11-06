@@ -1,80 +1,61 @@
 
-function validateForm() {
-  
-  const email = document.getElementById('email').value.trim();
-  const password = document.getElementById('password').value.trim();
 
-
-  const emailError = document.getElementById('emailError');
-  const passwordError = document.getElementById('passwordError');
-
- 
-  emailError.textContent = '';
-  passwordError.textContent = '';
-
-  
-  let valid = true;
-
-  
-  if (email === '') {
-      emailError.textContent = 'El campo de email es obligatorio.';
-      valid = false;
-  }
-
-  
-  if (password === '') {
-      passwordError.textContent = 'El campo de contraseña es obligatorio.';
-      valid = false;
-  }
-
-  
-  return valid;
-}
-
-
-
-function SeguirBoton() {
-  var boton = document.getElementById("seguir");
-  if (boton.textContent === "Seguir") {
-    boton.textContent = "Siguiendo";
-    boton.style.backgroundColor = "#C57900";
-  } else {
-    boton.textContent = "Seguir";
-    boton.style.backgroundColor = "black";
-  }
-}
-
-
-function enviar() {
-  var nombre = document.getElementById("formulario").value;
-  alert("Tu comentario ha sido enviado");
-}
-
-
-window.addEventListener('load', function() {
-  setTimeout(function() {
+window.addEventListener('load', function () {
+  setTimeout(function () {
     document.getElementById('loaderContainer').style.display = 'none';
     document.getElementById('cargador').style.display = 'block';
     document.body.style.overflow = 'auto';
   }, 500);
 });
 
+document.getElementById('loginForm').addEventListener('submit', function (event) {
+  const email = document.getElementById('email').value;
+  const password = document.getElementById('password').value;
+
+  // Validación para campos obligatorios
+  if (!email || !password) {
+    alert('Por favor, ingresa tu correo electrónico y tu contraseña.');
+    event.preventDefault(); // Evita el envío real del formulario si falta información
+    return;
+  }
+
+  // Aquí puedes agregar lógica de autenticación si es necesario
+  alert('Inicio de sesión exitoso');
+});
+
+document.getElementById('registerForm').addEventListener('submit', function (event) {
+  const name = document.getElementById('name').value;
+  const client = document.getElementById('client').value;
+  const email = document.getElementById('email').value;
+  const password = document.getElementById('password').value;
+
+  // Validación para asegurar que todos los campos estén llenos
+  if (!name || !client || !email || !password) {
+    alert('Por favor, completa todos los campos antes de registrarte.');
+    event.preventDefault(); // Evita el envío del formulario si falta información
+    return;
+  }
+
+  // Aquí puedes agregar lógica de autenticación si es necesario
+  alert('Registro exitoso');
+});
+
 
 function searchRecipe() {
   var query = document.getElementById('search').value.toLowerCase();
-  
+
   var recipes = {
-    'pastas': 'receta pastas.html',
-    'pizza': 'receta pizza.html',
-    'aperitivos': 'receta aperitivos.html',
-    'ensalada': 'receta ensalada.html',
-    'hamburguesa': 'receta hamburguersa.html',
-    'sushi': 'receta sushi.html',
-    'tarta': 'receta tarta.html',
-    'sopa': 'Receta.html',
-    'kansas': 'Mi restaurante.html'
+    'pastas': 'Pastas.html',
+    'pizza': 'pizza.html',
+    'aperitivos': 'Aperitivos.html',
+    'ensalada': 'ensalada.html',
+    'hamburguesa': 'hamburguesa.html',
+    'sushi': 'sushi.html',
+    'tarta': 'tarta.html',
+    'sopa': 'Sopadecalabaza.html',
+    'kansas': 'perfilrestaurante.html'
   };
-  
+
   if (recipes[query]) {
     window.location.href = recipes[query];
   } else {
@@ -117,138 +98,68 @@ function submitRecipe() {
 }
 
 
+function openCommentsModal() {
+  document.getElementById('commentsModal').style.display = 'flex';
+}
+
+// Cerrar modal
+function closeCommentsModal() {
+  document.getElementById('commentsModal').style.display = 'none';
+}
+
+
 var modal = document.getElementById("miVentana");
 var btn = document.getElementById("abrirVentana");
 var span = document.getElementsByClassName("boton-cerrar")[0];
 
-btn.addEventListener('click', function() {
+btn.addEventListener('click', function () {
   modal.style.display = "block";
   document.body.classList.add("sin-scroll");
 });
 
-span.addEventListener('click', function() {
+span.addEventListener('click', function () {
   modal.style.display = "none";
   document.body.classList.remove("sin-scroll");
 });
 
 window.addEventListener('click', windowOnClick);
 
+/* https://magicloops.dev/es */
+function enviarMail(email, nombre, apellido, mensaje) {
+  // Por si necesito usar letrs o simbolos raros
+  const emailEncoded = encodeURIComponent(email);
+  const nombreEncoded = encodeURIComponent(nombre);
+  const apellidoEncoded = encodeURIComponent(apellido);
+  const mensajeEncoded = encodeURIComponent(mensaje);
+  //Ahora necesitamos la url de la api junto a los valores codificados
+  //La api la cree en magicloops.dev y envia el mail a mi casilla personal.
+  const url = `https://magicloops.dev/api/loop/run/9ae1799b-9d8c-47a7-8d23-160f3c0aeeb9?nombre=${nombreEncoded}&apellido=${apellidoEncoded}&email=${emailEncoded}&mensaje=${mensajeEncoded}`;
 
-function openPopup() {
-  document.getElementById('followersPopup').style.display = 'block';
-  document.body.classList.add('no-scroll');
-  loadFollowers();
+  fetch(url)//Envia una peticion a la api
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Error en la solicitud: ' + response.status);
+      }
+      return response.json();
+    })
+    .then(data => {
+      console.log('Respuesta del servidor:', data); // Esperemos que sea un mensaje de ok y estatus 200 jaja
+      return true;
+    })
+    .catch(error => {
+      console.error('Hubo un error:', error);
+      return 0;
+    });
 }
+function enviarCorreo() {
+  const email = document.getElementById("email").value;
+  const usuario = document.getElementById("nombreUsuario").value;
+  const apellido = document.getElementById("apellidoUsuario").value;
+  const mensaje = document.getElementById("mensajeUsuario").value;
+  console.log(email, usuario, apellido, mensaje);
+  enviarMail(email, usuario, apellido, mensaje);
+  return false;
 
-
-function closePopup() {
-  document.getElementById('followersPopup').style.display = 'none';
-  document.body.classList.remove('no-scroll');
 }
+/* enviarMail('prueba@pruebafacu.com', 'Facu', 'Romero', 'Hola curso, es una prueba'); */
 
-
-function loadFollowers() {
-  const followers = [
-    { name: 'Juan Pérez', username: '@juanp', photo: 'IMAGENES/Classic gradient 02-Photoroom (4).png' },
-    { name: 'Antonio López', username: '@antonioL', photo: 'IMAGENES/Classic gradient 02-Photoroom (5).png' },
-    { name: 'Maria Castro', username: '@mariac', photo: 'IMAGENES/Classic gradient 02-Photoroodsdsm (3).png' },
-    { name: 'Beatriz Diez', username: '@bead', photo: 'IMAGENES/Classic gradient 02-Photoroom (6).png' },
-    { name: 'Andrea Gomez', username: '@andreg', photo: 'IMAGENES/Professional 01-Photoroom.jpg' }
-  ];
-
-  const followersContainer = document.getElementById('followersContainer');
-  followersContainer.innerHTML = '';
-
-  followers.forEach(follower => {
-    const followerItem = document.createElement('div');
-    followerItem.className = 'follower-item';
-
-    const photo = document.createElement('img');
-    photo.src = follower.photo;
-    photo.alt = follower.name;
-    photo.className = 'follower-photo';
-
-    const info = document.createElement('div');
-    info.className = 'follower-info';
-
-    const name = document.createElement('div');
-    name.className = 'follower-name';
-    name.textContent = follower.name;
-
-    const username = document.createElement('div');
-    username.className = 'follower-username';
-    username.textContent = follower.username;
-
-    info.appendChild(name);
-    info.appendChild(username);
-
-    followerItem.appendChild(photo);
-    followerItem.appendChild(info);
-
-    followersContainer.appendChild(followerItem);
-  });
-}
-
-
-document.getElementById('followersButton').addEventListener('click', openPopup);
-
-
-document.getElementById('openFollowingPopup').addEventListener('click', function() {
-  openFollowingModal();
-});
-
-
-function openFollowingModal() {
-  document.getElementById('followingModal').style.display = 'block';
-  document.body.classList.add('no-scroll');
-  loadFollowing();
-}
-
-
-function closeFollowingModal() {
-  document.getElementById('followingModal').style.display = 'none';
-  document.body.classList.remove('no-scroll');
-}
-
-
-function loadFollowing() {
-  const followingList = [
-    { name: 'Juan Pérez', username: '@juanp', photo: 'IMAGENES/Classic gradient 02-Photoroom (4).png' },
-    { name: 'Antonio López', username: '@antonioL', photo: 'IMAGENES/Classic gradient 02-Photoroom (5).png' },
-    { name: 'Maria Castro', username: '@mariac', photo: 'IMAGENES/Classic gradient 02-Photoroodsdsm (3).png' },
-    { name: 'Beatriz Diez', username: '@bead', photo: 'IMAGENES/Classic gradient 02-Photoroom (6).png' },
-    { name: 'Andrea Gomez', username: '@andreg', photo: 'IMAGENES/Professional 01-Photoroom.jpg' }
-  ];
-
-  const followingContainer = document.getElementById('followingList');
-  followingContainer.innerHTML = '';
-
-  followingList.forEach(person => {
-    const followingItem = document.createElement('div');
-    followingItem.className = 'following-item';
-
-    const avatar = document.createElement('img');
-    avatar.src = person.photo;
-    avatar.alt = person.name;
-    avatar.className = 'following-avatar';
-
-    const details = document.createElement('div');
-    details.className = 'following-details';
-
-    const name = document.createElement('div');
-    name.className = 'following-name';
-    name.textContent = person.name;
-
-    const username = document.createElement('div');
-    username.className = 'following-username';
-    username.textContent = person.username;
-
-    details.appendChild(name);
-    details.appendChild(username);
-
-    followingItem.appendChild(avatar);
-    followingItem.appendChild(details);
-
-    followingContainer.appendChild(followingItem);
-  });
-}

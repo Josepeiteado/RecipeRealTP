@@ -3,145 +3,143 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Recipe Realm es una pagina web para ayudarte a encontrar lo que quieras para cocinar, te brinda los ingredientes y te da toda la información necesaria para que puedas hacerlo">
-    <meta name="keywords" content="Ingredientes, cocinar, preparación, Recetas,seguir, información">
-    <link rel="canonical" href="www.reciperealm.com">
-    <meta name="robots" content="www.reciperealm.com">
-    <meta name="author" content="Alvarez, Palacios, Peiteado y Rocco">
-    <meta name="publisher" content="Alvarez, Palacios, Peiteado y Rocco">
-    <title>Página principal de Recipe Realm</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="Script2.js"></script>
+    <title>Página Principal- Recipe Realm</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div id="loaderContainer"> 
         <div id="loader"></div>
     </div>
     <div id="cargador">
-
-        <header-component></header-component>
-
-    <div class="banner">
-        <div class="search-container">
-            <div class="search-bar">
-                <form onsubmit="return searchRecipe()">
-                    <input type="text" id="search" placeholder="Busca tu receta...">
-                    <input class="buscador" type="submit" value="Buscar">
-                </form>
-            </div>
-        </div>
-        </div>
-
-    <div class="comidas">
-        <a href="#pizza"><img class="pizza"src="IMAGENES/Group 4.png" alt="comida1" title="pizza"></a>
-        <a href="#ensalada"><img class="ensalada"src="IMAGENES/Group 26.png" alt="comida2" title="ensalada"></a>
-        <a href="#tarta"><img class="postres"src="IMAGENES/Group 6.png" alt="comida3" title="postres"></a>
-        <a href="#pastas"><img class="pastas"src="IMAGENES/Group 7.png" alt="comida4" title="pastas"></a>
-        <a href="#platos"><img class="platos"src="IMAGENES/Group 25.png" alt="comida5" title="platos"></a>
-        <a href="#aperitivos"><img class="aperitivos"src="IMAGENES/Group 9.png" alt="comida6" title="aperitivos"></a>
-    </div>
-
-    <div class="grid-container">
-        <div class="card">
-            <img src="IMAGENES/composicion-deliciosa-sopa-otono_23-2148634466 1.png" alt="Imagen de Receta 1" title="receta1" class="card-image">
-            <div class="card-content">
-                <h2 class="card-title">SOPA DE CALABAZA</h2>
-                <h3 class="card-subtitle">Cucina D'Onore</h3>
-                <h4>NIVEL FACIL  / DURACIÓN 30’</h4>
-                <button class="card-button"><a class="link2" href="Receta.html" title="recetaas4">VER RECETAS</a></button>
-            </div>
-        </div>
-        <div class="card" id="pizza">
-            <img src="IMAGENES/pizza.png" alt="Imagen de Receta 2" title="receta2" class="card-image">
-            <div class="card-content">
-                <h2 class="card-title">PIZZA ITALIANA CON MIEL</h2>
-                <h3 class="card-subtitle">Italpizza</h3>
-                <h4>NIVEL FACIL  / DURACIÓN 45’</h4>
-                <button class="card-button"><a class="link2" href="Receta pizza.html" title="receta5">VER RECETAS</a></button>
-            </div>
-        </div>
-    </div>
-
-    <div class="grid-container">
-        <div class="card" id="tarta">
-            <img src="IMAGENES/TARTA.png" alt="Imagen de Receta 1" title="Pato a la narajna" class="card-image">
-            <div class="card-content">
-                <h2 class="card-title">TARTA DE PHILADELPHIA</h2>
-                <h3 class="card-subtitle">Bis Bistro</h3>
-                <h4>NIVEL FACIL  / DURACIÓN 30’</h4>
-                <br>
-                <br>
-                <button class="card-button"><a class="link2" href="receta tarta.html" title="receta6">VER RECETAS</a></button>
-            </div>
-        </div>
-        <div class="card" id="ensalada">
-            <img src="IMAGENES/ensalada-salad-m 1.png" alt="Imagen de Receta 2" title="ensalada con aiceitunas" class="card-image">
-            <div class="card-content">
-                <h2 class="card-title">  ENSALADA CON ACEITUNAS GORDAL</h2>
-                <h3 class="card-subtitle">Mengano</h3>
-                <h4>NIVEL FACIL  / DURACIÓN 30’</h4>
-                <br>
-                <br>
-                <button class="card-button"><a class="link2" href="receta ensalada.html" title="receta7">VER RECETAS</a></button>
-            </div>
-        </div>
-        
-    </div>
     
-    <div class="grid-container">
-        <div class="card" id="platos">
-            <img src="IMAGENES/hamburguesa-gambas 2.png" alt="Imagen de Receta 1" title="hamburguesa" class="card-image">
-            <div class="card-content">
-                <h2 class="card-title">HAMBURGUESA GAMBAS Y GULAS </h2>
-                <h3 class="card-subtitle">The Burger Company</h3>
-                <h4>NIVEL FACIL  / DURACIÓN 30’</h4>
-                <br>
-                <br>
-                <button class="card-button"><a class="link2" href="receta hamburguersa.html" title="receta8">VER RECETAS</a></button>
-            </div>
-        </div>
-        <div class="card">
-            <img src="IMAGENES/RJ_EPISODICAS_URAMAKI_PHILADELPHIA_ROLL_NEW_YORK_ROLL-8-1024x683 1.png" alt="Imagen de Receta 2"  title="uramaki" class="card-image">
-            <div class="card-content">
-                <h2 class="card-title">URAMAKI</h2>
-                <h3 class="card-subtitle">Fabric</h3>
-                <h4>NIVEL FACIL  / DURACIÓN 30’</h4>
-                <br>
-                <br>
-                <button class="card-button"><a class="link2" href="receta sushi.html" title="receta9">VER RECETAS</a></button>
-            </div>
-        </div>
+    
+    <main>
         
+    
+            <header-component></header-component>
+    
+        <div class="banner">
+            <div class="search-container">
+                <div class="search-bar">
+                    <form onsubmit="return searchRecipe()">
+                        <input type="text" id="search" placeholder="Busca tu receta...">
+                        <input class="buscador" type="submit" value="Buscar">
+                    </form>
+                </div>
+            </div>
+            </div>
+        
+    </main>
+
+    <div class="image-gallery">
+        <img  src="IMAGENES/Group 4.png" alt="Imagen 1"></a>
+        <img  src="IMAGENES/Ensalada.png" alt="Imagen 2">
+        <img src="IMAGENES/Group 6.png" alt="Imagen 3">
+        <img src="IMAGENES/Group 7.png" alt="Imagen 4">
+        <img src="IMAGENES/g.png" alt="Imagen 5">
+        <img  src="IMAGENES/Aperitivo.png" alt="Imagen 6">
     </div>
 
-    <div class="grid-container">
-        <div class="card" id="pastas">
-            <img src="IMAGENES/pasta_fBaW4Xh0vdNORixwSAJ9MsK7k6HFQo-1024x683 1.png" alt="Imagen de Receta 1" title="pastas de langostinos" class="card-image">
-            <div class="card-content">
-                <h2 class="card-title">PASTAS DE LANGOSTINOS</h2>
-                <h3 class="card-subtitle">Sucre</h3>
-                <h4>NIVEL FACIL  / DURACIÓN 30’</h4>
-                <br>
-                <br>
-                <button class="card-button"><a class="link2" href="receta pastas.html" title="receta10">VER RECETAS</a></button>
-
+    <br>
+    <br>
+    <div class="recipe-container">
+        <!-- Card 1 -->
+        <div class="recipe-card">
+            <img src="IMAGENES/composicion-deliciosa-sopa-otono_23-2148634466 1.png" alt="Sopa de Calabaza">
+            <div class="recipe-info">
+                <h3>Sopa de Calabaza</h3>
+                <p>Cucina D'Onore</p>
+                <span>Nivel Fácil / Duración 30'</span>
+                <button><a  class="subrayado" href="Sopadecalabaza.html">Ver Recetas</a></button>
             </div>
         </div>
-        <div class="card" id="aperitivos">
-            <img src="IMAGENES/APERITIVOS.png" alt="Imagen de Receta 2"  title="wrap" class="card-image">
-            <div class="card-content">
-                <h2 class="card-title">APERITIVOS</h2>
-                <h3 class="card-subtitle">El galpon de tacuara</h3>
-                <h4>NIVEL FACIL  / DURACIÓN 30’</h4>
-                <br>
-                <br>
-                <button class="card-button"><a class="link2" href="receta aperitivos.html" title="receta11">VER RECETAS</a></button>
-                
+        <!-- Card 2 -->
+        <div class="recipe-card" id="pizza">
+            <img src="IMAGENES/pizza.png" alt="Pizza Italiana con Miel">
+            <div class="recipe-info">
+                <h3>Pizza Italiana con Miel</h3>
+                <p>Italpizza</p>
+                <span>Nivel Fácil / Duración 45'</span>
+                <button><a class="subrayado" href="pizza.html">Ver Recetas</a></button>
             </div>
         </div>
-        
     </div>
 
+    <div class="recipe-container">
+        <!-- Card 1 -->
+        <div class="recipe-card">
+            <img src="IMAGENES/TARTA.png" alt="Sopa de Calabaza">
+            <div class="recipe-info">
+                <h3> Tarta de Philadelphia</h3>
+                <p>Bis Bistro</p>
+                <span>Nivel Fácil / Duración 30'</span>
+                <button><a class="subrayado" href="tarta.html">Ver Recetas</a></button>
+            </div>
+        </div>
+
+    
+        <!-- Card 2 -->
+        <div class="recipe-card">
+            <img src="IMAGENES/ensalada-salad-m 1.png" alt="Pizza Italiana con Miel">
+            <div class="recipe-info">
+                <h3>Ensalada con aceite gordal</h3>
+                <p>Mengano</p>
+                <span>Nivel Fácil / Duración 30'</span>
+                <button><a class="subrayado" href="ensalada.html">Ver Recetas</a></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="recipe-container">
+        <!-- Card 1 -->
+        <div class="recipe-card">
+            <img src="IMAGENES/hamburguesa-gambas 2.png" alt="Sopa de Calabaza">
+            <div class="recipe-info">
+                <h3>Hamburguesa Gambas y Gulas </h3>
+                <p>The Burger Company</p>
+                <span>Nivel Fácil / Duración 30'</span>
+                <button><a class="subrayado" href="hamburguesa.html">Ver Recetas</a></button>
+            </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="recipe-card">
+            <img src="IMAGENES/RJ_EPISODICAS_URAMAKI_PHILADELPHIA_ROLL_NEW_YORK_ROLL-8-1024x683 1.png" alt="Pizza Italiana con Miel">
+            <div class="recipe-info">
+                <h3>Uramaki</h3>
+                <p>Fabric</p>
+                <span>Nivel Fácil / Duración 45'</span>
+                <button><a class="subrayado" href="sushi.html">Ver Recetas</a></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="recipe-container">
+        <!-- Card 1 -->
+        <div class="recipe-card">
+            <img src="IMAGENES/pasta_fBaW4Xh0vdNORixwSAJ9MsK7k6HFQo-1024x683 1.png" alt="Sopa de Calabaza">
+            <div class="recipe-info">
+                <h3>Pastas de Langostinos</h3>
+                <p>Sucre</p>
+                <span>Nivel Fácil / Duración 30'</span>
+                <button><a class="subrayado" href="Pastas.html">Ver Recetas</a></button>
+            </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="recipe-card">
+            <img src="IMAGENES/APERITIVOS.png" alt="Pizza Italiana con Miel">
+            <div class="recipe-info">
+                <h3>Aperitivos</h3>
+                <p>El galpón de Tacuará</p>
+                <span>Nivel Fácil / Duración 45'</span>
+                <button><a class="subrayado" href="Aperitivos.html">Ver Recetas</a></button>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <br>
+    
     <button class="floating-button" onclick="openModal()">+</button>
     <div id="myModal" class="modal">
         <div class="modal-content">
@@ -159,11 +157,41 @@
         </div>
     </div>
 
-    <br>
-    <br>
-    
+    <form action="success.html" onsubmit="return enviarCorreo()">
+        <div class="form-group">
+            <label for="exampleInputEmail1">Correo electronico</label>
+            <input type="email" class="form-control" id="email" aria-describedby="emailHelp"
+                placeholder="Ingresa tu email">
+        </div>
+        <div class="form-group">
+            <label for="nombreUsuario">Nombre</label>
+            <input type="text" class="form-control" id="nombreUsuario" placeholder="Nombre">
+            <label for="apellidoUsuario">Apellido</label>
+            <input type="text" class="form-control" id="apellidoUsuario" placeholder="Apellido">
+            <label for="mensajeUsuario">Ingrese su mensaje</label>
+            <textarea class="form-control" id="mensajeUsuario" rows="3"></textarea>
+        </div>
+        <button class="color" type="submit" class="btn btn-primary">Enviar</button>
+    </form>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+      
+  <br>
+  <br>
+
     <footer-component></footer-component>
-</div>
-<script src="script.js"></script>
+    
+    <script src="script3.js"></script>
+    <script src="script2.js"></script>
+    <script src="script.js"></script>
 </body>
+
 </html>

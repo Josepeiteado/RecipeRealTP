@@ -1,40 +1,35 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Recipe Realm es una pagina web para ayudarte a encontrar lo que quieras para cocinar, te brinda los ingredientes y te da toda la información necesaria para que puedas hacerlo">
-    <meta name="keywords" content="Ingredientes, cocinar, preparación, Recetas,seguir, información">
-    <link rel="canonical" href="www.reciperealm.com">
-    <meta name="robots" content="www.reciperealm.com">
-    <meta name="author" content="Alvarez, Palacios, Peiteado y Rocco">
-    <meta name="publisher" content="Alvarez, Palacios, Peiteado y Rocco">
-  <title>Iniciar Sesión- Recipe realm- Aplicación de cocina</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Realm - Iniciar Sesión</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-  <div class="container">
-        <div class="login-form">
-            <h2><img class="logo" src="IMAGENES/recipe realm.png" alt="Logo" title="Logo"></h2>
-            <p>Bienvenidos!</p>
-            <form id="loginForm" action="Inicio.html" method="get" onsubmit="return validateForm()">
-                <label for="email">Email</label>
-                <input type="email" placeholder="Correo Electrónico" id="email" name="email">
-                <div id="emailError" class="error-message"></div>
+<body class="bodyprin">
+    <div class="login-container">
+        <div class="login-box">
+            <h1>Recipe Realm</h1>
+            <form id="loginForm">
+                <label for="email">Bienvenidos!</label>
+                <input type="email" id="email" placeholder="Correo Electrónico" required>
+                
                 <label for="password">Contraseña</label>
-                <input type="password" placeholder="Contraseña" id="password" name="password">
-                <div id="passwordError" class="error-message"></div>
+                <input type="password" id="password" placeholder="Contraseña" required>
                 <br>
-                <button type="submit" class="botoprincipal">Iniciar Sesión</button>
+                <br>
+                
+                <button class="inises" type="submit"><a class="subrayado" href="inicio.html">Iniciar Sesión</a></button>
+                
             </form>
             <p class="pregunta">¿No tienes una cuenta?</p>
-            <button class="butonr"><a class="link1" href="Cliente.html" title="Registrarse">Registrarse</a></button>
+                <br>
+                <button class="butonr"><a class="link1" href="cliente.html" title="Registrarse">Registrarse</a></button>
         </div>
         <div class="image-container">
-            <img class="principal" src="IMAGENES/image 2.png" alt="Imagen" title="imagen principal">
+            <img src="IMAGENES/image 2.png" alt="Cooking Image">
         </div>
     </div>
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
-

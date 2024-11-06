@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receta de Tarta de Philadelphia</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body >
+
+    <header-component></header-component>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="centrado">
+    <div class="receta-contenedor5">
+        <div class="tarjeta-receta5">
+            <img src="IMAGENES/TARTA.png" alt="Sopa de Calabaza" class="imagen-receta5"></span>
+
+            <div class="iconos-derecha">
+                <span><i class="icon"><img src="IMAGENES/icono1.png" alt="icono 1" title="icon 1"></i>
+                    
+                <span><i class="icon"><img src="IMAGENES/icono2.png" alt="icono 2" title="icon 2"></i></span>
+                <span><i class="icon"><img src="IMAGENES/icono3.png" alt="icono 3" title="icon 3"></i></span>
+            </div>
+            <h1>TARTA DE PHILADELPHIA</h1>
+            <br>
+            <h2>Bis Bistro</h2>
+            <br>
+            <p>NIVEL FÁCIL / DURACIÓN 30'</p>
+            <div class="seccion5">
+                <h3>Ingredientes</h3>
+                <ul>
+                    <li>7 cucharadas de mantequilla.</li>
+                    <li>2 paquetes de galletas para triturar.</li>
+                    <li>2 tazas de queso philadelphia.</li>
+                    <li>C4 cucharadas de manteca.</li>
+                    <li>Brick y medio de nata de los de 250 ml</li>
+                    <li>1/3 de taza de azúcar.</li>
+                    <li>1 sobre de gelatina sin sabor.</li>
+                    <li>Mermelada de frutas o trozos de frutas para decorar.</li>
+                
+                </ul>
+            </div>
+            <div class="seccion5">
+                <h3>Preparación</h3>
+                <ul>
+                    <li>Triturar las galletas para hacer la masa.</li>
+                    <li>Derretir la mantequilla.</li>
+                    <li>Mezclar los dos ingredientes anteriores en un recipiente.</li>
+                    <li>Una vez lograda una pasta homogénea, distribuir en el molde de la tarta y acomodar de tal forma que quede uniforme.</li>
+                    <li>Dejar que se enfríe la masa.</li>
+                    <li>Mezclar en una cacerola aparte la gelatina, la nata y el azúcar, mientras que se remueven a fuego lento, hasta lograr una crema homogénea, con los polvos bien diluidos.</li>
+                    <li>Añadir el queso philadelphia y mezclar hasta que esté totalmente integrado.</li>
+                    <li>Verter la crema sobre la basa de galletas trituradas. Acomodar de manera uniforme.</li>
+                    <li>Refrigerar por un tiempo mínimo de seis horas.</li>
+                    <li>Pasado este tiempo, desmoldar y cubrir con la mermelada y los frutos.</li>
+                
+                </ul>
+            </div>
+            <div class="comentarios5">
+                <input type="text" placeholder="Escribe un comentario...">
+                <button id="boton-enviar">Enviar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<button class="floating-button" onclick="openModal()">+</button>
+<div id="myModal" class="modal">
+    <div class="modal-content">
+        <span class="close-button" onclick="closeModal()">&times;</span>
+        <h2>Sube tu Receta</h2>
+        <form onsubmit="return submitRecipe()">
+            <label for="recipeName">Nombre de la Receta:</label>
+            <input type="text" id="recipeName" name="recipeName" required><br><br>
+            <label for="ingredients">Ingredientes:</label><br>
+            <textarea id="ingredients" name="ingredients" rows="4" cols="50" required></textarea><br><br>
+            <label for="instructions">Instrucciones:</label><br>
+            <textarea id="instructions" name="instructions" rows="4" cols="50" required></textarea><br><br>
+            <input class="subir" type="submit" value="Subir Receta">
+        </form>
+    </div>
+</div>
+
+<footer-component></footer-component>
+
+<script src="script3.js"></script>
+<script src="script2.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
