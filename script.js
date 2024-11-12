@@ -5,7 +5,7 @@ window.addEventListener('load', function () {
     document.getElementById('loaderContainer').style.display = 'none';
     document.getElementById('cargador').style.display = 'block';
     document.body.style.overflow = 'auto';
-  }, 500);
+  }, 1000);
 });
 
 document.getElementById('loginForm').addEventListener('submit', function (event) {
@@ -162,4 +162,6 @@ function enviarCorreo() {
 
 }
 /* enviarMail('prueba@pruebafacu.com', 'Facu', 'Romero', 'Hola curso, es una prueba'); */
+
+
 
